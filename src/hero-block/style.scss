@@ -10,3 +10,17 @@
 	color: #fff;
 	padding: 2px;
 }
+
+.hero-grid {
+	display: grid;
+	grid-template-columns: 1.08fr 0.92fr;
+	gap: 3rem;
+	align-items: center;
+	position: relative;
+	h1 {
+		em {
+			font-style: normal;
+			color: #f7c600;
+		}
+	}
+}
