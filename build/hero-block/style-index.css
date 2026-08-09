@@ -20,6 +20,13 @@
   align-items: center;
   position: relative;
 }
+.hero-grid h1 {
+  font-family: "Marske", sans-serif;
+  font-size: clamp(1.55rem, 3.6vw, 2.7rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 1rem 0 1.1rem;
+}
 .hero-grid h1 em {
   font-style: normal;
   color: #f7c600;
