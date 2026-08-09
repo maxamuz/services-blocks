@@ -1,0 +1,90 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "services-blocks/hero-block",
+  "version": "0.1.0",
+  "title": "Hero Block",
+  "category": "services",
+  "icon": "media-document",
+  "description": "Главный блок сервиса с формой Contact Form 7",
+  "supports": {
+    "html": false
+  },
+  "textdomain": "services-blocks",
+  "attributes": {
+    "eyebrow": {
+      "type": "string",
+      "default": "Автосервис ГаражСАО · с 2009 года"
+    },
+    "title": {
+      "type": "string",
+      "default": "Замена масла в АКПП, вариаторе и роботе <em>в Москве</em>"
+    },
+    "subtitle": {
+      "type": "string",
+      "default": "Сначала бесплатно проверим состояние жидкости и честно скажем, нужна ли замена. Потом согласуем смету — и она не изменится в процессе."
+    },
+    "chips": {
+      "type": "array",
+      "default": [
+        {
+          "icon": "💰",
+          "text": "от 2 500 ₽"
+        },
+        {
+          "icon": "⏱",
+          "text": "1–2 часа"
+        },
+        {
+          "icon": "🛡",
+          "text": "гарантия до 2 лет / 60 000 км",
+          "iconClass": "gr"
+        },
+        {
+          "icon": "★",
+          "text": "5.0 · 557 отзывов",
+          "iconClass": "st"
+        }
+      ]
+    },
+    "ctaPrimaryText": {
+      "type": "string",
+      "default": "Рассчитать мою стоимость"
+    },
+    "ctaPrimaryUrl": {
+      "type": "string",
+      "default": "#calc"
+    },
+    "ctaSecondaryText": {
+      "type": "string",
+      "default": "📞 Позвонить"
+    },
+    "phone": {
+      "type": "string",
+      "default": "+74957989887"
+    },
+    "note": {
+      "type": "string",
+      "default": "🎁 При записи через сайт — <b>скидка 5%</b>. Диагностикa трансмиссии — <b>0 ₽</b> при замене."
+    },
+    "cf7Id": {
+      "type": "string",
+      "default": ""
+    },
+    "formTitle": {
+      "type": "string",
+      "default": "Узнайте точную стоимость для вашего авто"
+    },
+    "formSubtitle": {
+      "type": "string",
+      "default": "Оставьте телефон — мастер перезвонит в течение 15 минут, сориентирует по цене и запишет на удобное время."
+    },
+    "trustText": {
+      "type": "string",
+      "default": "<span class=\"st\">★★★★★</span> 5.0 на Яндекс Картах · нас рекомендуют друзьям с 2009 года"
+    }
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}
