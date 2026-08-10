@@ -13,7 +13,7 @@
 
 .wp-block-services-blocks-hero-block.hero {
 	background: radial-gradient(
-			900px 460px at 88% -8%,
+			900px 460px at 100% -33%,
 			rgba(255, 199, 0, 0.1),
 			transparent 62%
 		),
@@ -92,7 +92,10 @@
 	.hero-note {
 		margin-top: 1rem;
 		font-size: 0.78rem;
-		color: var(--mut);
+		color: #a4a4ab;
+		b {
+			color: #ffc700;
+		}
 	}
 }
 
@@ -208,6 +211,18 @@
 		input[type="checkbox"] + span:before {
 			left: -10px !important;
 			top: 3px !important;
+		}
+	}
+	.hf-trust {
+		display: flex;
+		gap: 0.5rem;
+		align-items: center;
+		margin-top: 1rem;
+		font-size: 0.75rem;
+		color: #a4a4ab;
+		.st {
+			color: #ffb300;
+			letter-spacing: 1px;
 		}
 	}
 }
