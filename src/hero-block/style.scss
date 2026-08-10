@@ -17,10 +17,13 @@
 			rgba(255, 199, 0, 0.1),
 			transparent 62%
 		),
-		var(--bg);
-	padding: 3.6rem 57.6px 0 4.4rem;
+		#0a0a0b;
+	padding: 3.6rem 57.6px 3.6rem 4.4rem;
 	position: relative;
 	overflow: hidden;
+	&::after {
+		content: none;
+	}
 }
 
 .hero-grid {

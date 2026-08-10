@@ -91,22 +91,62 @@ return array(
 		'editorStyle' => 'file:./index.css',
 		'style' => 'file:./style-index.css'
 	),
-	'services-blocks' => array(
+	'trust-block' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
-		'name' => 'create-block/services-blocks',
+		'name' => 'create-block/trust-block',
 		'version' => '0.1.0',
-		'title' => 'Services Blocks',
+		'title' => 'Trust Block',
 		'category' => 'services',
-		'icon' => 'smiley',
-		'description' => 'Example block scaffolded with Create Block tool.',
-		'example' => array(
-			
+		'icon' => 'star-filled',
+		'description' => 'Блок с цифрами доверия.',
+		'attributes' => array(
+			'yearsCount' => array(
+				'type' => 'string',
+				'default' => '17'
+			),
+			'yearsLabel' => array(
+				'type' => 'string',
+				'default' => 'лет'
+			),
+			'yearsDesc' => array(
+				'type' => 'string',
+				'default' => 'обслуживаем автомобили'
+			),
+			'carsCount' => array(
+				'type' => 'string',
+				'default' => '12400'
+			),
+			'carsHasPlus' => array(
+				'type' => 'boolean',
+				'default' => true
+			),
+			'carsDesc' => array(
+				'type' => 'string',
+				'default' => 'авто в год проходит через нас'
+			),
+			'adaptersCount' => array(
+				'type' => 'string',
+				'default' => '100'
+			),
+			'adaptersHasPlus' => array(
+				'type' => 'boolean',
+				'default' => true
+			),
+			'adaptersDesc' => array(
+				'type' => 'string',
+				'default' => 'адаптеров аппаратной замены'
+			),
+			'ratingValue' => array(
+				'type' => 'string',
+				'default' => '5.0'
+			),
+			'ratingDesc' => array(
+				'type' => 'string',
+				'default' => 'рейтинг · 557 отзывов'
+			)
 		),
-		'supports' => array(
-			'html' => false
-		),
-		'textdomain' => 'services-blocks',
+		'textdomain' => 'trust-block',
 		'editorScript' => 'file:./index.js',
 		'editorStyle' => 'file:./index.css',
 		'style' => 'file:./style-index.css',
