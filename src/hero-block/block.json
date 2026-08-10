@@ -47,7 +47,7 @@
 		},
 		"ctaSecondaryText": {
 			"type": "string",
-			"default": "📞 Позвонить"
+			"default": "☎ Позвонить"
 		},
 		"phone": {
 			"type": "string",

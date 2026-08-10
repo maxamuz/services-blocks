@@ -60,7 +60,7 @@ return array(
 			),
 			'ctaSecondaryText' => array(
 				'type' => 'string',
-				'default' => '📞 Позвонить'
+				'default' => '☎ Позвонить'
 			),
 			'phone' => array(
 				'type' => 'string',
