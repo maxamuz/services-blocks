@@ -3,7 +3,7 @@
 	margin: 0;
 
 	.sec.white {
-		background: #fff;
+		background: #131315;
 		padding: 3.5rem 0;
 		position: relative;
 	}
@@ -19,7 +19,7 @@
 			font-weight: 600;
 			letter-spacing: 1px;
 			text-transform: uppercase;
-			color: #b8860b;
+			color: #f5c518;
 			margin-bottom: 18px;
 			padding: 6px 14px;
 			background: rgba(184, 134, 11, 0.08);
@@ -31,7 +31,7 @@
 			font-family: "Marske", sans-serif;
 			font-size: clamp(1.4rem, 2.8vw, 2.2rem);
 			font-weight: 800;
-			color: #0a0a0b;
+			color: #fff;
 			margin: 0 0 0.9rem;
 			line-height: 1.15;
 		}
@@ -40,7 +40,7 @@
 			font-family: "Golos Text", system-ui, sans-serif;
 			font-size: 1rem;
 			line-height: 1.5;
-			color: #555;
+			color: #a4a4ab;
 			margin: 0;
 		}
 	}
@@ -64,20 +64,19 @@
 
 		.sym {
 			font-family: "Golos Text", system-ui, sans-serif;
-			background: #f7f7f8;
-			border: 1.5px solid #e4e4e7;
+			background: #18181b;
+			border: 1.5px solid #2b2b30;
+			color: #eee;
 			border-radius: 99px;
-			padding: 0.7rem 1.1rem;
+			padding: 0.75rem 1.2rem;
 			font-size: 0.9rem;
 			font-weight: 500;
-			color: #27272a;
-			cursor: pointer;
-			transition: all 0.2s ease;
-			text-align: left;
+			transition: 0.25s;
+			user-select: none;
 
 			&:hover {
-				border-color: #d4a017;
-				background: #fff9e6;
+				border-color: #ffc700;
+				transform: translateY(-2px);
 			}
 
 			&.is-active {
@@ -95,8 +94,8 @@
 	}
 
 	.verdict {
-		background: linear-gradient(135deg, #fffbeb 0%, #fff 60%);
-		border: 1.5px solid #fde68a;
+		background: #18181b;
+		border: 1.5px solid #2b2b30;
 		border-radius: 18px;
 		padding: 1.6rem 1.8rem;
 		box-shadow: 0 12px 32px rgba(180, 130, 20, 0.08);
@@ -106,14 +105,14 @@
 			font-size: 1.2rem;
 			font-weight: 700;
 			margin: 0 0 0.5rem;
-			color: #111;
+			color: #fff;
 		}
 
 		p {
 			font-family: "Golos Text", system-ui, sans-serif;
 			font-size: 0.93rem;
 			line-height: 1.55;
-			color: #4b5563;
+			color: #a4a4ab;
 			margin: 0 0 1.1rem;
 
 			&:last-child {

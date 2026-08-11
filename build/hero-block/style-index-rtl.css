@@ -1,1 +1,220 @@
-.wp-block-create-block-hero-block{background-color:#21759b;color:#fff;padding:2px}.wp-block-services-blocks-hero-block.hero{background:radial-gradient(900px 460px at 100% -33%,rgba(255,199,0,.1),transparent 62%),#0a0a0b;overflow:hidden;padding:3.6rem 4.4rem 3.6rem 57.6px;position:relative}.wp-block-services-blocks-hero-block.hero:after{content:none}.hero-grid{align-items:center;align-items:flex-start;display:grid;gap:3rem;grid-template-columns:1.08fr .92fr;position:relative}.hero-grid h1{font-family:Marske,sans-serif;font-size:clamp(1.55rem,3.6vw,2.7rem);font-weight:800;margin:1rem 0 1.1rem;text-transform:uppercase}.hero-grid h1 em{color:#f5b41a;font-style:normal}.hero-grid .eyebrow{background:rgba(245,197,24,.08);border:1px solid rgba(245,197,24,.18);border-radius:4px;color:var(--yellow,#f5c518);display:inline-block;font-family:Montserrat,sans-serif;font-size:13px;font-weight:600;letter-spacing:1px;margin-bottom:18px;padding:6px 14px;text-transform:uppercase}.hero-grid .hero-sub{color:#d7d7d7;font-family:Marske,sans-serif;font-size:22px;font-weight:500;line-height:1.1;margin-bottom:26px;max-width:520px}.hero-grid .hero-chips{display:flex;flex-wrap:wrap;gap:.6rem;margin:1.4rem 0 1.8rem}.hero-grid .hero-chips .chip{align-items:center;background:#18181b;border:1px solid #2b2b30;border-radius:99px;box-shadow:0 4px 14px rgba(0,0,0,.35);display:inline-flex;font-family:Golos Text,system-ui,sans-serif;font-size:.82rem;font-weight:600;gap:.45rem;padding:.5rem 1rem}.hero-grid .hero-chips .chip .gr{color:#2ecc71}.hero-grid .hero-note{color:#a4a4ab;font-size:.78rem;margin-top:1rem}.hero-grid .hero-note b{color:#ffc700}.hero-cta{display:flex;flex-wrap:wrap;gap:.9rem}.hero-cta .btn{align-items:center;border:1px solid transparent;border-radius:12px;display:inline-flex;font-family:Golos Text,system-ui,sans-serif;font-size:.92rem;font-weight:700;gap:.5rem;justify-content:center;padding:.95rem 1.6rem;transition:transform .2s,box-shadow .2s,background .2s;white-space:nowrap}.hero-cta .btn-lg{font-size:1rem;padding:1.1rem 2rem}.hero-cta .btn-red{background:#f5c518;box-shadow:0 10px 26px rgba(255,199,0,.28);color:#111}.hero-cta .btn-red:hover{background:#e0af00;color:#111;transform:translateY(-2px)}.hero-cta .btn-out{background:transparent;border-color:#3a3a40;color:#fff}.hero-cta .btn-out:hover{border-color:#f5c518;color:#f5c518}.hero-form{background:#18181b;border:1px solid #2b2b30;border-radius:22px;box-shadow:0 22px 60px rgba(0,0,0,.6);padding:2rem;position:relative}.hero-form h3{font-size:1.4rem;margin-bottom:.4rem;text-transform:none}.hero-form>p{color:#a4a4ab;font-size:.85rem;margin:0 0 1.6rem}.hero-form form input[type=tel]{background:#131315;border:1.5px solid #2b2b30;border-radius:12px;color:#fff;flex:1;font-family:Golos Text,system-ui,sans-serif;font-size:.95rem;outline:none;padding:.95rem 1.1rem;transition:border-color .2s;width:100%}.hero-form form input[type=submit]{background:#ffc700;border:1px solid transparent;border-radius:12px;box-shadow:0 10px 26px rgba(255,199,0,.28);color:#111;font-family:Golos Text,system-ui,sans-serif;font-size:.92rem;font-weight:700;padding:.95rem 1.6rem}.hero-form form input[type=submit]:hover{background:#e0af00;transform:translateY(-2px)}.hero-form form .captcha-image{border-color:#2b2b30;border-radius:12px;color:#787884;font-size:.85rem;width:100%}.hero-form form .form-agreement{color:#6f6f6f;font-size:14px;line-height:1.5;margin-top:12px}.hero-form form .wpcf7-list-item-label a{color:#6f6f6f;font-weight:500}.hero-form form input[type=checkbox]+span:before{right:-10px!important;top:3px!important}.hero-form .hf-trust{align-items:center;color:#a4a4ab;display:flex;font-size:.75rem;gap:.5rem;margin-top:1rem}.hero-form .hf-trust .st{color:#ffb300;letter-spacing:1px}
+/*!**************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/hero-block/style.scss ***!
+  \**************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-create-block-hero-block {
+  background-color: #21759b;
+  color: #fff;
+  padding: 2px;
+}
+
+.wp-block-services-blocks-hero-block.hero {
+  background: radial-gradient(900px 460px at 100% -33%, rgba(255, 199, 0, 0.1), transparent 62%), #0a0a0b;
+  padding: 3.6rem 4.4rem 3.6rem 57.6px;
+  position: relative;
+  overflow: hidden;
+}
+.wp-block-services-blocks-hero-block.hero::after {
+  content: none;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.08fr 0.92fr;
+  gap: 3rem;
+  align-items: center;
+  position: relative;
+  align-items: flex-start;
+}
+.hero-grid h1 {
+  font-family: "Marske", sans-serif;
+  font-size: clamp(1.55rem, 3.6vw, 2.7rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 1rem 0 1.1rem;
+}
+.hero-grid h1 em {
+  font-style: normal;
+  color: #f5b41a;
+}
+.hero-grid .eyebrow {
+  display: inline-block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--yellow, #f5c518);
+  margin-bottom: 18px;
+  padding: 6px 14px;
+  background: rgba(245, 197, 24, 0.08);
+  border: 1px solid rgba(245, 197, 24, 0.18);
+  border-radius: 4px;
+}
+.hero-grid .hero-sub {
+  font-family: "Marske", sans-serif;
+  font-size: 22px;
+  color: #d7d7d7;
+  max-width: 520px;
+  margin-bottom: 26px;
+  font-weight: 500;
+  line-height: 1.1;
+}
+.hero-grid .hero-chips {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin: 1.4rem 0 1.8rem;
+}
+.hero-grid .hero-chips .chip {
+  font-family: "Golos Text", system-ui, sans-serif;
+  background: #18181b;
+  border: 1px solid #2b2b30;
+  border-radius: 99px;
+  padding: 0.5rem 1rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+}
+.hero-grid .hero-chips .chip .gr {
+  color: #2ecc71;
+}
+.hero-grid .hero-note {
+  margin-top: 1rem;
+  font-size: 0.78rem;
+  color: #a4a4ab;
+}
+.hero-grid .hero-note b {
+  color: #ffc700;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+}
+.hero-cta .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: "Golos Text", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 0.92rem;
+  padding: 0.95rem 1.6rem;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+  white-space: nowrap;
+}
+.hero-cta .btn-lg {
+  padding: 1.1rem 2rem;
+  font-size: 1rem;
+}
+.hero-cta .btn-red {
+  background: #f5c518;
+  color: #111;
+  box-shadow: 0 10px 26px rgba(255, 199, 0, 0.28);
+}
+.hero-cta .btn-red:hover {
+  background: #e0af00;
+  transform: translateY(-2px);
+  color: #111;
+}
+.hero-cta .btn-out {
+  border-color: #3a3a40;
+  background: transparent;
+  color: #fff;
+}
+.hero-cta .btn-out:hover {
+  border-color: #f5c518;
+  color: #f5c518;
+}
+
+.hero-form {
+  background: #18181b;
+  border: 1px solid #2b2b30;
+  border-radius: 22px;
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  position: relative;
+}
+.hero-form h3 {
+  font-size: 1.4rem;
+  text-transform: none;
+  margin-bottom: 0.4rem;
+}
+.hero-form > p {
+  font-size: 0.85rem;
+  color: #a4a4ab;
+  margin: 0 0 1.6rem;
+}
+.hero-form form input[type=tel] {
+  flex: 1;
+  border: 1.5px solid #2b2b30;
+  border-radius: 12px;
+  padding: 0.95rem 1.1rem;
+  font-size: 0.95rem;
+  font-family: "Golos Text", system-ui, sans-serif;
+  outline: none;
+  transition: border-color 0.2s;
+  background: #131315;
+  color: #fff;
+  width: 100%;
+}
+.hero-form form input[type=submit] {
+  background: #ffc700;
+  color: #111;
+  box-shadow: 0 10px 26px rgba(255, 199, 0, 0.28);
+  font-weight: 700;
+  font-size: 0.92rem;
+  padding: 0.95rem 1.6rem;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  font-family: "Golos Text", system-ui, sans-serif;
+}
+.hero-form form input[type=submit]:hover {
+  background: #e0af00;
+  transform: translateY(-2px);
+}
+.hero-form form .captcha-image {
+  width: 100%;
+  border-radius: 12px;
+  color: #787884;
+  font-size: 0.85rem;
+  border-color: #2b2b30;
+}
+.hero-form form .form-agreement {
+  color: #6f6f6f;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-top: 12px;
+}
+.hero-form form .wpcf7-list-item-label a {
+  color: #6f6f6f;
+  font-weight: 500;
+}
+.hero-form form input[type=checkbox] + span:before {
+  right: -10px !important;
+  top: 3px !important;
+}
+.hero-form .hf-trust {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  color: #a4a4ab;
+}
+.hero-form .hf-trust .st {
+  color: #ffb300;
+  letter-spacing: 1px;
+}
