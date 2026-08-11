@@ -1,0 +1,67 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "services-blocks/diagnost-block",
+  "version": "0.1.0",
+  "title": "Блок Диагностики АКПП",
+  "category": "services",
+  "icon": "heart",
+  "description": "Интерактивный блок самодиагностики коробки передач.",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "eyebrow": {
+      "type": "string",
+      "default": "Шаг 1 · Самодиагностика"
+    },
+    "title": {
+      "type": "string",
+      "default": "Отметьте, что замечаете в поведении коробки"
+    },
+    "description": {
+      "type": "string",
+      "default": "Нажмите на признаки — подскажем, что делать именно в вашей ситуации. Это бесплатно и ни к чему не обязывает."
+    },
+    "symptoms": {
+      "type": "array",
+      "default": [
+        "Толчки и пинки при переключении",
+        "Пробуксовки: обороты растут, разгона нет",
+        "Задержки при переключении передач",
+        "Масло на щупе тёмное или пахнет гарью",
+        "Гул, вой или шум при движении",
+        "Прошло 4 года или 60 000 км с замены"
+      ]
+    },
+    "verdictDefaultTitle": {
+      "type": "string",
+      "default": "💬 Наш подсказ"
+    },
+    "verdictDefaultText": {
+      "type": "string",
+      "default": "Отметьте признаки выше — и мы честно подскажем, нужна ли замена сейчас или можно спокойно ездить дальше."
+    },
+    "ctaText": {
+      "type": "string",
+      "default": "Записаться на бесплатную диагностику"
+    },
+    "imageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "imageAlt": {
+      "type": "string",
+      "default": "Сравнение чистого и отработанного масла ATF"
+    },
+    "figcaption": {
+      "type": "string",
+      "default": "Слева — рабочая ATF, справа — отработанная. Разница видна без приборов."
+    }
+  },
+  "textdomain": "services-blocks",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js"
+}

@@ -1,0 +1,192 @@
+.wp-block-services-blocks-diagnost-block {
+	padding: 0;
+	margin: 0;
+
+	.sec.white {
+		background: #fff;
+		padding: 3.5rem 0;
+		position: relative;
+	}
+
+	.sec-head {
+		margin-bottom: 2.2rem;
+		max-width: 780px;
+
+		.eyebrow {
+			display: inline-block;
+			font-family: "Montserrat", sans-serif;
+			font-size: 13px;
+			font-weight: 600;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+			color: #b8860b;
+			margin-bottom: 18px;
+			padding: 6px 14px;
+			background: rgba(184, 134, 11, 0.08);
+			border: 1px solid rgba(184, 134, 11, 0.18);
+			border-radius: 4px;
+		}
+
+		h2 {
+			font-family: "Marske", sans-serif;
+			font-size: clamp(1.4rem, 2.8vw, 2.2rem);
+			font-weight: 800;
+			color: #0a0a0b;
+			margin: 0 0 0.9rem;
+			line-height: 1.15;
+		}
+
+		p {
+			font-family: "Golos Text", system-ui, sans-serif;
+			font-size: 1rem;
+			line-height: 1.5;
+			color: #555;
+			margin: 0;
+		}
+	}
+
+	.check-wrap {
+		display: grid;
+		grid-template-columns: 1.15fr 0.85fr;
+		gap: 2.5rem;
+		align-items: start;
+
+		@media (max-width: 900px) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	.sym-chips {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.7rem;
+		margin-bottom: 2rem;
+
+		.sym {
+			font-family: "Golos Text", system-ui, sans-serif;
+			background: #f7f7f8;
+			border: 1.5px solid #e4e4e7;
+			border-radius: 99px;
+			padding: 0.7rem 1.1rem;
+			font-size: 0.9rem;
+			font-weight: 500;
+			color: #27272a;
+			cursor: pointer;
+			transition: all 0.2s ease;
+			text-align: left;
+
+			&:hover {
+				border-color: #d4a017;
+				background: #fff9e6;
+			}
+
+			&.is-active {
+				background: #f5c518;
+				border-color: #f5c518;
+				color: #111;
+				font-weight: 600;
+				box-shadow: 0 6px 16px rgba(245, 197, 24, 0.3);
+
+				&::before {
+					content: "✓ ";
+				}
+			}
+		}
+	}
+
+	.verdict {
+		background: linear-gradient(135deg, #fffbeb 0%, #fff 60%);
+		border: 1.5px solid #fde68a;
+		border-radius: 18px;
+		padding: 1.6rem 1.8rem;
+		box-shadow: 0 12px 32px rgba(180, 130, 20, 0.08);
+
+		h3 {
+			font-family: "Marske", sans-serif;
+			font-size: 1.2rem;
+			font-weight: 700;
+			margin: 0 0 0.5rem;
+			color: #111;
+		}
+
+		p {
+			font-family: "Golos Text", system-ui, sans-serif;
+			font-size: 0.93rem;
+			line-height: 1.55;
+			color: #4b5563;
+			margin: 0 0 1.1rem;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		.btn {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			gap: 0.5rem;
+			font-family: "Golos Text", system-ui, sans-serif;
+			font-weight: 700;
+			font-size: 0.92rem;
+			padding: 0.85rem 1.4rem;
+			border-radius: 12px;
+			border: 1px solid transparent;
+			transition: all 0.2s ease;
+			white-space: nowrap;
+			text-decoration: none;
+
+			&.btn-red {
+				background: #f5c518;
+				color: #111;
+				box-shadow: 0 8px 20px rgba(255, 199, 0, 0.25);
+
+				&:hover {
+					background: #e0af00;
+					transform: translateY(-2px);
+					color: #111;
+				}
+			}
+		}
+	}
+
+	.check-side {
+		position: sticky;
+		top: 1rem;
+		display: flex;
+		flex-direction: column;
+		gap: 0.8rem;
+
+		.check-img {
+			width: 100%;
+			border-radius: 18px;
+			box-shadow: 0 16px 44px rgba(0, 0, 0, 0.12);
+			border: 1px solid #e5e7eb;
+			aspect-ratio: 4 / 3;
+			object-fit: cover;
+			background: #f3f4f6;
+		}
+
+		figcaption {
+			font-family: "Golos Text", system-ui, sans-serif;
+			font-size: 0.8rem;
+			line-height: 1.5;
+			color: #6b7280;
+			text-align: center;
+			padding: 0 0.4rem;
+		}
+	}
+
+	.rv {
+		opacity: 0;
+		transform: translateY(18px);
+		animation: rvFade 0.7s ease forwards;
+	}
+
+	@keyframes rvFade {
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+}
