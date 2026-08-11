@@ -159,6 +159,82 @@ return array(
 		'style' => 'file:./style-index.css',
 		'viewScript' => 'file:./view.js'
 	),
+	'mathematics-block' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'services-blocks/mathematics-block',
+		'version' => '0.1.0',
+		'title' => 'Блок Математика',
+		'category' => 'services',
+		'icon' => 'chart-bar',
+		'description' => 'Блок сравнения стоимости: замена масла АКПП vs ремонт.',
+		'supports' => array(
+			'html' => false
+		),
+		'attributes' => array(
+			'eyebrow' => array(
+				'type' => 'string',
+				'default' => 'Шаг 2 · Математика'
+			),
+			'title' => array(
+				'type' => 'string',
+				'default' => 'Профилактика в 8 раз дешевле ремонта'
+			),
+			'cardGoodLabel' => array(
+				'type' => 'string',
+				'default' => 'Замена масла в АКПП'
+			),
+			'cardGoodSum' => array(
+				'type' => 'string',
+				'default' => '≈ 7 500'
+			),
+			'cardGoodCurrency' => array(
+				'type' => 'string',
+				'default' => '₽'
+			),
+			'cardGoodText' => array(
+				'type' => 'string',
+				'default' => '1–2 часа времени, плавные переключения и +60 000 км спокойной езды. Продлевает ресурс коробки в разы.'
+			),
+			'cardGoodWidth' => array(
+				'type' => 'string',
+				'default' => '12'
+			),
+			'cardGoodHasVs' => array(
+				'type' => 'boolean',
+				'default' => true
+			),
+			'cardBadLabel' => array(
+				'type' => 'string',
+				'default' => 'Ремонт или замена АКПП'
+			),
+			'cardBadSum' => array(
+				'type' => 'string',
+				'default' => 'от 60 000'
+			),
+			'cardBadCurrency' => array(
+				'type' => 'string',
+				'default' => '₽'
+			),
+			'cardBadText' => array(
+				'type' => 'string',
+				'default' => 'Если ездить с отработанной жидкостью до конца: продукты износа работают как абразив и добивают коробку. Доходит до 300 000 ₽ на премиуме.'
+			),
+			'cardBadWidth' => array(
+				'type' => 'string',
+				'default' => '100'
+			),
+			'note' => array(
+				'type' => 'string',
+				'default' => '💡 <b>Вывод простой:</b> если коробке больше 3–4 лет или 60 000 км без замены — дешевле обновить жидкость сейчас, чем платить за ремонт потом. Проверка состояния — бесплатно.'
+			)
+		),
+		'textdomain' => 'services-blocks',
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css',
+		'viewScript' => 'file:./view.js'
+	),
 	'trust-block' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,

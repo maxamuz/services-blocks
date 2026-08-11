@@ -284,11 +284,7 @@ export default function Edit({ attributes, setAttributes }) {
 											lineHeight: 1.4,
 										}}
 									>
-										🖼{" "}
-										{__(
-											"Изображение не выбрано. Загрузите его в панели «Изображение и подпись» справа.",
-											"services-blocks",
-										)}
+										🖼 {__("Изображение не выбрано. Загрузите его в панели «Изображение и подпись» справа.", "services-blocks")}
 									</div>
 								)}
 								<RichText
