@@ -1,9 +1,21 @@
-/**
- * The following styles get applied inside the editor only.
- *
- * Replace them with your own styles or remove the file completely.
- */
+.wp-block-services-blocks-hero-block {
+	.cf7-placeholder {
+		font-family: "Golos Text", system-ui, sans-serif;
+	}
 
-.wp-block-create-block-hero-block {
-	border: 1px dotted #f00;
+	.num-input {
+		min-width: 80px;
+		border: none;
+		background: transparent;
+		font: inherit;
+		color: inherit;
+		padding: 0;
+		box-shadow: none;
+		outline: 1px dashed transparent;
+		transition: outline-color 0.15s;
+
+		&:focus {
+			outline-color: #f5c518;
+		}
+	}
 }

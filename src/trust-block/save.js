@@ -46,9 +46,7 @@ export default function save({ attributes }) {
 
 					<div className="rv">
 						<div className="num">
-							{/* Если рейтинг статичен, можно оставить как есть, 
-							    но лучше тоже сделать атрибутом */}
-							{ratingValue}
+							<span data-to={ratingValue}>0</span>
 						</div>
 						<RichText.Content tagName="p" value={ratingDesc} />
 					</div>

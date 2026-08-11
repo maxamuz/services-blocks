@@ -95,6 +95,66 @@ export default function Edit({ attributes, setAttributes }) {
 				</PanelBody>
 
 				<PanelBody title={__("Изображение и подпись", "services-blocks")}>
+					<MediaUploadCheck>
+						<MediaUpload
+							onSelect={onSelectImage}
+							allowedTypes={["image"]}
+							value={imageUrl ? "" : undefined}
+							render={({ open }) => (
+								<div style={{ marginBottom: "1rem" }}>
+									{imageUrl ? (
+										<>
+											<div
+												style={{
+													borderRadius: "12px",
+													overflow: "hidden",
+													border: "1px solid #e5e7eb",
+													marginBottom: "0.75rem",
+												}}
+											>
+												<img
+													src={imageUrl}
+													alt={imageAlt}
+													style={{
+														display: "block",
+														width: "100%",
+														aspectRatio: "4 / 3",
+														objectFit: "cover",
+													}}
+												/>
+											</div>
+											<div
+												style={{
+													display: "flex",
+													gap: "8px",
+													flexWrap: "wrap",
+												}}
+											>
+												<Button variant="secondary" onClick={open}>
+													{__("Заменить изображение", "services-blocks")}
+												</Button>
+												<Button
+													isDestructive
+													variant="secondary"
+													onClick={removeImage}
+												>
+													{__("Удалить", "services-blocks")}
+												</Button>
+											</div>
+										</>
+									) : (
+										<Button
+											variant="primary"
+											onClick={open}
+											style={{ width: "100%", justifyContent: "center" }}
+										>
+											📷 {__("Выбрать изображение", "services-blocks")}
+										</Button>
+									)}
+								</div>
+							)}
+						/>
+					</MediaUploadCheck>
 					<TextControl
 						label={__("Alt текст изображения", "services-blocks")}
 						value={imageAlt}
@@ -184,37 +244,53 @@ export default function Edit({ attributes, setAttributes }) {
 							</div>
 
 							<div className="check-side rv">
-								<MediaUploadCheck>
-									<MediaUpload
-										onSelect={onSelectImage}
-										allowedTypes={["image"]}
-										value={imageUrl ? "" : undefined}
-										render={({ open }) =>
-											imageUrl ? (
-												<div className="editor-image-preview">
-													<img src={imageUrl} alt={imageAlt} />
-													<Button
-														className="remove-image-btn"
-														isDestructive
-														variant="secondary"
-														onClick={removeImage}
-													>
-														Удалить
-													</Button>
-												</div>
-											) : (
-												<div
-													className="editor-image-placeholder"
-													onClick={open}
-												>
-													<div className="components-placeholder__label">
-														📷 Нажмите, чтобы выбрать изображение
-													</div>
-												</div>
-											)
-										}
-									/>
-								</MediaUploadCheck>
+								{imageUrl ? (
+									<div
+										style={{
+											width: "100%",
+											borderRadius: "18px",
+											overflow: "hidden",
+											boxShadow: "0 16px 44px rgba(0,0,0,0.12)",
+											border: "1px solid #e5e7eb",
+										}}
+									>
+										<img
+											src={imageUrl}
+											alt={imageAlt}
+											style={{
+												display: "block",
+												width: "100%",
+												aspectRatio: "4 / 3",
+												objectFit: "cover",
+												background: "#f3f4f6",
+											}}
+										/>
+									</div>
+								) : (
+									<div
+										style={{
+											width: "100%",
+											aspectRatio: "4 / 3",
+											borderRadius: "18px",
+											background: "#f3f4f6",
+											border: "2px dashed #d1d5db",
+											display: "flex",
+											alignItems: "center",
+											justifyContent: "center",
+											textAlign: "center",
+											padding: "1rem",
+											color: "#6b7280",
+											fontSize: "0.85rem",
+											lineHeight: 1.4,
+										}}
+									>
+										🖼{" "}
+										{__(
+											"Изображение не выбрано. Загрузите его в панели «Изображение и подпись» справа.",
+											"services-blocks",
+										)}
+									</div>
+								)}
 								<RichText
 									tagName="figcaption"
 									value={figcaption}

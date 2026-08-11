@@ -8,7 +8,7 @@ import {
 	PanelBody,
 	TextControl,
 	Button,
-	IconButton,
+	TextareaControl,
 } from "@wordpress/components";
 
 export default function Edit({ attributes, setAttributes }) {
@@ -33,7 +33,6 @@ export default function Edit({ attributes, setAttributes }) {
 		id: "hero",
 	});
 
-	// --- Управление чипсами ---
 	const updateChip = (index, field, value) => {
 		const newChips = [...chips];
 		newChips[index] = { ...newChips[index], [field]: value };
@@ -54,16 +53,38 @@ export default function Edit({ attributes, setAttributes }) {
 	return (
 		<>
 			<InspectorControls>
-				{/* Основные тексты */}
-				<PanelBody title={__("Текст блока", "services-blocks")}>
+				<PanelBody title={__("Основные тексты", "services-blocks")}>
 					<TextControl
-						label={__("Телефон", "services-blocks")}
+						label={__("Надзаголовок (eyebrow)", "services-blocks")}
+						value={eyebrow}
+						onChange={(val) => setAttributes({ eyebrow: val })}
+					/>
+					<TextareaControl
+						label={__("Заголовок H1", "services-blocks")}
+						value={title}
+						onChange={(val) => setAttributes({ title: val })}
+					/>
+					<TextareaControl
+						label={__("Подзаголовок", "services-blocks")}
+						value={subtitle}
+						onChange={(val) => setAttributes({ subtitle: val })}
+					/>
+					<TextareaControl
+						label={__("Примечание под кнопками (note)", "services-blocks")}
+						value={note}
+						onChange={(val) => setAttributes({ note: val })}
+					/>
+					<TextControl
+						label={__("Телефон (для кнопки Позвонить)", "services-blocks")}
 						value={phone}
 						onChange={(val) => setAttributes({ phone: val })}
+						help={__(
+							"Формат: +7XXXXXXXXXX без пробелов",
+							"services-blocks",
+						)}
 					/>
 				</PanelBody>
 
-				{/* Кнопки CTA */}
 				<PanelBody
 					title={__("Кнопки CTA", "services-blocks")}
 					initialOpen={false}
@@ -77,6 +98,7 @@ export default function Edit({ attributes, setAttributes }) {
 						label={__("Основная кнопка: ссылка", "services-blocks")}
 						value={ctaPrimaryUrl}
 						onChange={(val) => setAttributes({ ctaPrimaryUrl: val })}
+						help={__("Например: #calc или /calc/", "services-blocks")}
 					/>
 					<TextControl
 						label={__("Вторая кнопка: текст", "services-blocks")}
@@ -85,46 +107,10 @@ export default function Edit({ attributes, setAttributes }) {
 					/>
 				</PanelBody>
 
-				{/* Чипсы */}
 				<PanelBody
 					title={__("Чипсы (бейджи)", "services-blocks")}
 					initialOpen={false}
 				>
-					<PanelBody
-						title={__("Форма заявки", "services-blocks")}
-						initialOpen={false}
-					>
-						<RichText
-							tagName="p"
-							value={formTitle}
-							onChange={(val) => setAttributes({ formTitle: val })}
-							placeholder={__("Заголовок формы…", "services-blocks")}
-							allowedFormats={[]}
-							style={{ fontWeight: "bold", marginBottom: "0.5rem" }}
-						/>
-						<RichText
-							tagName="p"
-							value={formSubtitle}
-							onChange={(val) => setAttributes({ formSubtitle: val })}
-							placeholder={__("Подзаголовок формы…", "services-blocks")}
-							allowedFormats={[]}
-						/>
-						<TextControl
-							label={__("ID формы Contact Form 7", "services-blocks")}
-							value={cf7Id}
-							onChange={(val) => setAttributes({ cf7Id: val })}
-							help={__("Только числовой ID (например: 123)", "services-blocks")}
-						/>
-						<RichText
-							tagName="div"
-							className="hf-trust"
-							value={trustText}
-							onChange={(val) => setAttributes({ trustText: val })}
-							placeholder={__("Блок доверия под формой…", "services-blocks")}
-							allowedFormats={["core/bold", "core/italic"]}
-							style={{ marginTop: "1rem", fontSize: "0.85rem", color: "#666" }}
-						/>
-					</PanelBody>
 					{chips.map((chip, index) => (
 						<div
 							key={index}
@@ -170,16 +156,30 @@ export default function Edit({ attributes, setAttributes }) {
 					</Button>
 				</PanelBody>
 
-				{/* CF7 */}
 				<PanelBody
-					title={__("Форма заявки", "services-blocks")}
+					title={__("Форма заявки (CF7)", "services-blocks")}
 					initialOpen={false}
 				>
+					<TextControl
+						label={__("Заголовок формы", "services-blocks")}
+						value={formTitle}
+						onChange={(val) => setAttributes({ formTitle: val })}
+					/>
+					<TextareaControl
+						label={__("Подзаголовок формы", "services-blocks")}
+						value={formSubtitle}
+						onChange={(val) => setAttributes({ formSubtitle: val })}
+					/>
 					<TextControl
 						label={__("ID формы Contact Form 7", "services-blocks")}
 						value={cf7Id}
 						onChange={(val) => setAttributes({ cf7Id: val })}
 						help={__("Только числовой ID (например: 123)", "services-blocks")}
+					/>
+					<TextareaControl
+						label={__("Блок доверия под формой", "services-blocks")}
+						value={trustText}
+						onChange={(val) => setAttributes({ trustText: val })}
 					/>
 				</PanelBody>
 			</InspectorControls>
@@ -213,7 +213,6 @@ export default function Edit({ attributes, setAttributes }) {
 							allowedFormats={[]}
 						/>
 
-						{/* Редактируемые чипсы */}
 						<div className="hero-chips">
 							{chips.map((chip, index) => (
 								<span className="chip" key={index}>
@@ -227,7 +226,6 @@ export default function Edit({ attributes, setAttributes }) {
 							))}
 						</div>
 
-						{/* Редактируемые кнопки CTA */}
 						<div className="hero-cta">
 							<a className="btn btn-red btn-lg" href={ctaPrimaryUrl}>
 								{ctaPrimaryText}
@@ -237,7 +235,6 @@ export default function Edit({ attributes, setAttributes }) {
 							</a>
 						</div>
 
-						{/* Редактируемый блок note */}
 						<RichText
 							tagName="p"
 							className="hero-note"
@@ -248,9 +245,7 @@ export default function Edit({ attributes, setAttributes }) {
 						/>
 					</div>
 
-					{/* Плейсхолдер CF7 в редакторе */}
 					<div className="hero-form rv on">
-						{/* Заголовок формы — ВЫШЕ формы */}
 						<RichText
 							tagName="h3"
 							value={formTitle}
@@ -259,7 +254,6 @@ export default function Edit({ attributes, setAttributes }) {
 							allowedFormats={[]}
 						/>
 
-						{/* Подзаголовок формы — НИЖЕ заголовка, ВЫШЕ формы */}
 						<RichText
 							tagName="p"
 							value={formSubtitle}
@@ -268,7 +262,6 @@ export default function Edit({ attributes, setAttributes }) {
 							allowedFormats={[]}
 						/>
 
-						{/* Плейсхолдер CF7 или реальная форма */}
 						{cf7Id ? (
 							<div
 								className="cf7-placeholder"
@@ -279,6 +272,7 @@ export default function Edit({ attributes, setAttributes }) {
 									borderRadius: "8px",
 									textAlign: "center",
 									color: "#666",
+									marginBottom: "1rem",
 								}}
 							>
 								📋 Contact Form 7 · ID: {cf7Id}
@@ -295,13 +289,13 @@ export default function Edit({ attributes, setAttributes }) {
 									borderRadius: "8px",
 									textAlign: "center",
 									color: "#856404",
+									marginBottom: "1rem",
 								}}
 							>
 								⚠️ Укажите ID формы Contact Form 7 в настройках блока
 							</div>
 						)}
 
-						{/* Блок доверия — НИЖЕ формы */}
 						<RichText
 							tagName="div"
 							className="hf-trust"

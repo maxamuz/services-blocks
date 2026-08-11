@@ -27,7 +27,7 @@ export default function Edit({ attributes, setAttributes }) {
 		<>
 			{/* Панель настроек в сайдбаре (опционально, для переключателей +) */}
 			<InspectorControls>
-				<PanelBody title={__("Настройки отображения", "trust-block")}>
+				<PanelBody title={__("Настройки отображения", "services-blocks")}>
 					<ToggleControl
 						label="Показать плюс у авто"
 						checked={carsHasPlus}

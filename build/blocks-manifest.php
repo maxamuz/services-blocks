@@ -156,17 +156,21 @@ return array(
 		),
 		'editorScript' => 'file:./index.js',
 		'editorStyle' => 'file:./index.css',
-		'style' => 'file:./style-index.css'
+		'style' => 'file:./style-index.css',
+		'viewScript' => 'file:./view.js'
 	),
 	'trust-block' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
-		'name' => 'create-block/trust-block',
+		'name' => 'services-blocks/trust-block',
 		'version' => '0.1.0',
 		'title' => 'Trust Block',
 		'category' => 'services',
 		'icon' => 'star-filled',
 		'description' => 'Блок с цифрами доверия.',
+		'supports' => array(
+			'html' => false
+		),
 		'attributes' => array(
 			'yearsCount' => array(
 				'type' => 'string',
@@ -213,7 +217,7 @@ return array(
 				'default' => 'рейтинг · 557 отзывов'
 			)
 		),
-		'textdomain' => 'trust-block',
+		'textdomain' => 'services-blocks',
 		'editorScript' => 'file:./index.js',
 		'editorStyle' => 'file:./index.css',
 		'style' => 'file:./style-index.css',
