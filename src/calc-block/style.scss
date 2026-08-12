@@ -1,0 +1,206 @@
+.wp-block-services-blocks-calc-block {
+	.sec.calc {
+		background: #131315;
+		padding: 4.8rem 0;
+	}
+
+	.sec-head {
+		max-width: 780px;
+		margin-bottom: 2.4rem;
+		.eyebrow {
+			background: rgba(184, 134, 11, 0.08);
+			border: 1px solid rgba(184, 134, 11, 0.18);
+			border-radius: 4px;
+			color: #f5c518;
+			display: inline-block;
+			font-family: Montserrat, sans-serif;
+			font-size: 13px;
+			font-weight: 600;
+			letter-spacing: 1px;
+			margin-bottom: 18px;
+			padding: 6px 14px;
+			text-transform: uppercase;
+		}
+
+		h2 {
+			color: #fff;
+			font-family: Marske, sans-serif;
+			font-size: clamp(1.4rem, 2.8vw, 2.2rem);
+			font-weight: 800;
+			line-height: 1.15;
+			margin: 0 0 0.9rem;
+		}
+
+		p {
+			color: rgba(255, 255, 255, 0.55);
+			margin: 0;
+			font-size: 1rem;
+		}
+	}
+
+	.calc-grid {
+		display: grid;
+		grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+		gap: 1.75rem;
+		align-items: start;
+	}
+
+	.pill-group {
+		margin-bottom: 1.4rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		h4 {
+			font-size: 0.7rem;
+			letter-spacing: 0.18em;
+			text-transform: uppercase;
+			color: rgba(255, 255, 255, 0.5);
+			margin-bottom: 0.7rem;
+		}
+	}
+
+	.pills {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+	}
+
+	.pill {
+		background: rgba(255, 255, 255, 0.05);
+		border: 1.5px solid rgba(255, 255, 255, 0.15);
+		color: rgba(255, 255, 255, 0.8);
+		border-radius: 99px;
+		padding: 0.65rem 1.15rem;
+		font-size: 0.86rem;
+		font-weight: 500;
+		transition: 0.25s;
+
+		&:hover {
+			border-color: #ffc700;
+			background: rgba(255, 255, 255, 0.06);
+		}
+
+		&:active {
+			transform: translateY(1px);
+		}
+
+		&.act {
+			background: #ffc700;
+			border-color: #ffc700;
+			color: #111;
+			box-shadow: 0 8px 22px rgba(255, 199, 0, 0.35);
+			font-weight: 700;
+		}
+	}
+
+	.calc-res {
+		background: rgba(255, 255, 255, 0.04);
+		border: 1px solid rgba(255, 255, 255, 0.12);
+		border-radius: 20px;
+		padding: 1.8rem;
+		position: sticky;
+		top: 100px;
+
+		h3 {
+			font-size: 1.2rem;
+			color: #ffc700;
+			margin-bottom: 1.1rem;
+		}
+	}
+
+	.crow,
+	.ctotal {
+		display: flex;
+		justify-content: space-between;
+		gap: 1rem;
+		padding: 0.6rem 0;
+		font-size: 0.88rem;
+		color: rgba(255, 255, 255, 0.7);
+	}
+
+	.crow {
+		border-bottom: 1px dashed #e5e7eb;
+
+		span {
+			color: #ffffff80;
+		}
+
+		b {
+			color: #fff;
+			font-weight: 600;
+			white-space: nowrap;
+		}
+	}
+
+	.ctotal {
+		margin-top: 0.2rem;
+		padding: 0.9rem 0 1.1rem;
+		display: flex;
+		align-items: center;
+
+		span {
+			font-size: 0.76rem;
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+			color: rgba(255, 255, 255, 0.5);
+		}
+
+		b {
+			font-weight: 800;
+			font-size: clamp(1.1rem, 2.2vw, 3rem);
+			color: #ffc700;
+		}
+	}
+
+	.calc-res .btn {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.5rem;
+		font-weight: 700;
+		font-size: 0.92rem;
+		padding: 0.95rem 1.6rem;
+		border-radius: 12px;
+		border: 1px solid transparent;
+		transition:
+			transform 0.2s,
+			box-shadow 0.2s,
+			background 0.2s;
+		white-space: nowrap;
+	}
+
+	.calc-res .btn-red {
+		background: #ffc700;
+		color: #111;
+		box-shadow: 0 10px 26px rgba(255, 199, 0, 0.28);
+		width: 100%;
+	}
+
+	.calc-res small {
+		display: block;
+		margin-top: 0.9rem;
+		font-size: 0.8rem;
+		line-height: 1.5;
+		color: #6b7280;
+	}
+}
+
+@media (max-width: 960px) {
+	.wp-block-services-blocks-calc-block {
+		.calc-grid {
+			grid-template-columns: 1fr;
+			gap: 1.25rem;
+		}
+
+		.calc-res {
+			position: static;
+		}
+
+		.pill {
+			font-size: 0.88rem;
+			padding: 0.48rem 0.8rem;
+		}
+	}
+}

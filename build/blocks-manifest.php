@@ -1,6 +1,209 @@
 <?php
 // This file is generated. Do not modify it manually.
 return array(
+	'calc-block' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'services-blocks/calc-block',
+		'version' => '0.1.0',
+		'title' => 'Блок Калькулятор',
+		'category' => 'services',
+		'icon' => 'calculator',
+		'description' => 'Калькулятор ориентировочной стоимости замены масла АКПП.',
+		'supports' => array(
+			'html' => false
+		),
+		'attributes' => array(
+			'eyebrow' => array(
+				'type' => 'string',
+				'default' => 'Шаг 5 · Калькулятор'
+			),
+			'eyebrowColor' => array(
+				'type' => 'string',
+				'default' => '#f5c518'
+			),
+			'title' => array(
+				'type' => 'string',
+				'default' => 'Сколько будет стоить для вашего авто?'
+			),
+			'titleColor' => array(
+				'type' => 'string',
+				'default' => '#ffffff'
+			),
+			'description' => array(
+				'type' => 'string',
+				'default' => 'Три нажатия — и у вас ориентир по цене, с которым можно сравнивать любые сервисы.'
+			),
+			'makeGroupTitle' => array(
+				'type' => 'string',
+				'default' => 'Ваш автомобиль'
+			),
+			'gearGroupTitle' => array(
+				'type' => 'string',
+				'default' => 'Коробка передач'
+			),
+			'methodGroupTitle' => array(
+				'type' => 'string',
+				'default' => 'Метод замены'
+			),
+			'makePills' => array(
+				'type' => 'array',
+				'default' => array(
+					array(
+						'label' => 'Бюджетный / РФ',
+						'value' => 'budget',
+						'default' => false
+					),
+					array(
+						'label' => 'Kia, Hyundai, Toyota, VAG…',
+						'value' => 'pop',
+						'default' => true
+					),
+					array(
+						'label' => 'BMW, Mercedes, Lexus, Porsche…',
+						'value' => 'prem',
+						'default' => false
+					)
+				)
+			),
+			'gearPills' => array(
+				'type' => 'array',
+				'default' => array(
+					array(
+						'label' => 'Автомат',
+						'value' => 'at',
+						'default' => true
+					),
+					array(
+						'label' => 'Вариатор',
+						'value' => 'cvt',
+						'default' => false
+					),
+					array(
+						'label' => 'Робот',
+						'value' => 'dsg',
+						'default' => false
+					)
+				)
+			),
+			'methodPills' => array(
+				'type' => 'array',
+				'default' => array(
+					array(
+						'label' => 'Частичная',
+						'value' => 'part',
+						'default' => false
+					),
+					array(
+						'label' => 'С поддоном и фильтром',
+						'value' => 'filter',
+						'default' => false
+					),
+					array(
+						'label' => 'Полная аппаратная',
+						'value' => 'app',
+						'default' => true
+					)
+				)
+			),
+			'workPrices' => array(
+				'type' => 'object',
+				'default' => array(
+					'budget' => array(
+						'part' => 1800,
+						'filter' => 3200,
+						'app' => 4500
+					),
+					'pop' => array(
+						'part' => 2500,
+						'filter' => 4500,
+						'app' => 6500
+					),
+					'prem' => array(
+						'part' => 4500,
+						'filter' => 7500,
+						'app' => 11000
+					)
+				)
+			),
+			'oilPrices' => array(
+				'type' => 'object',
+				'default' => array(
+					'at' => array(
+						'part' => 2400,
+						'filter' => 3600,
+						'app' => 7200
+					),
+					'cvt' => array(
+						'part' => 3300,
+						'filter' => 4900,
+						'app' => 9600
+					),
+					'dsg' => array(
+						'part' => 2800,
+						'filter' => 4400,
+						'app' => 8500
+					)
+				)
+			),
+			'timeLabels' => array(
+				'type' => 'object',
+				'default' => array(
+					'part' => '≈ 1 час',
+					'filter' => '1,5–2 часа',
+					'app' => '≈ 2 часа'
+				)
+			),
+			'asideTitle' => array(
+				'type' => 'string',
+				'default' => 'Предварительный расчёт'
+			),
+			'workLabel' => array(
+				'type' => 'string',
+				'default' => 'Работы'
+			),
+			'oilLabel' => array(
+				'type' => 'string',
+				'default' => 'Жидкость и расходники'
+			),
+			'timeLabel' => array(
+				'type' => 'string',
+				'default' => 'Время в сервисе'
+			),
+			'totalLabel' => array(
+				'type' => 'string',
+				'default' => 'Итого под ключ'
+			),
+			'ctaText' => array(
+				'type' => 'string',
+				'default' => 'Зафиксировать эту цену'
+			),
+			'ctaHref' => array(
+				'type' => 'string',
+				'default' => '#booking'
+			),
+			'disclaimer' => array(
+				'type' => 'string',
+				'default' => 'Расчёт предварительный. Точную смету зафиксируем после диагностики — и она не изменится. При записи онлайн действует скидка 5%.'
+			),
+			'emptyValue' => array(
+				'type' => 'string',
+				'default' => '—'
+			)
+		),
+		'example' => array(
+			'attributes' => array(
+				'eyebrow' => 'Шаг 5 · Калькулятор',
+				'title' => 'Сколько будет стоить для вашего авто?',
+				'description' => 'Три нажатия — и у вас ориентир по цене.'
+			)
+		),
+		'textdomain' => 'services-blocks',
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css',
+		'viewScript' => 'file:./view.js'
+	),
 	'diagnost-block' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,

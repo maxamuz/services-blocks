@@ -1,0 +1,26 @@
+.wp-block-services-blocks-calc-block {
+	.pills .pill {
+		[contenteditable="true"] {
+			outline: 1px dashed transparent;
+			border-radius: 999px;
+			padding: 0 4px;
+			transition: outline-color 0.15s;
+
+			&:focus {
+				outline-color: #fde047;
+			}
+		}
+	}
+
+	.calc-res {
+		b,
+		small {
+			[contenteditable="true"] {
+				outline: 1px dashed #fde047;
+				border-radius: 6px;
+				padding: 0 3px;
+				margin: 0 -3px;
+			}
+		}
+	}
+}

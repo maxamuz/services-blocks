@@ -1,0 +1,176 @@
+/*!**************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/calc-block/style.scss ***!
+  \**************************************************************************************************************************************************************************************************************************************************/
+.wp-block-services-blocks-calc-block .sec.calc {
+  background: #131315;
+  padding: 4.8rem 0;
+}
+.wp-block-services-blocks-calc-block .sec-head {
+  max-width: 780px;
+  margin-bottom: 2.4rem;
+}
+.wp-block-services-blocks-calc-block .sec-head .eyebrow {
+  background: rgba(184, 134, 11, 0.08);
+  border: 1px solid rgba(184, 134, 11, 0.18);
+  border-radius: 4px;
+  color: #f5c518;
+  display: inline-block;
+  font-family: Montserrat, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 18px;
+  padding: 6px 14px;
+  text-transform: uppercase;
+}
+.wp-block-services-blocks-calc-block .sec-head h2 {
+  color: #fff;
+  font-family: Marske, sans-serif;
+  font-size: clamp(1.4rem, 2.8vw, 2.2rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin: 0 0 0.9rem;
+}
+.wp-block-services-blocks-calc-block .sec-head p {
+  color: rgba(255, 255, 255, 0.55);
+  margin: 0;
+  font-size: 1rem;
+}
+.wp-block-services-blocks-calc-block .calc-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: 1.75rem;
+  align-items: start;
+}
+.wp-block-services-blocks-calc-block .pill-group {
+  margin-bottom: 1.4rem;
+}
+.wp-block-services-blocks-calc-block .pill-group:last-child {
+  margin-bottom: 0;
+}
+.wp-block-services-blocks-calc-block .pill-group h4 {
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 0.7rem;
+}
+.wp-block-services-blocks-calc-block .pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.wp-block-services-blocks-calc-block .pill {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.8);
+  border-radius: 99px;
+  padding: 0.65rem 1.15rem;
+  font-size: 0.86rem;
+  font-weight: 500;
+  transition: 0.25s;
+}
+.wp-block-services-blocks-calc-block .pill:hover {
+  border-color: #ffc700;
+  background: rgba(255, 255, 255, 0.06);
+}
+.wp-block-services-blocks-calc-block .pill:active {
+  transform: translateY(1px);
+}
+.wp-block-services-blocks-calc-block .pill.act {
+  background: #ffc700;
+  border-color: #ffc700;
+  color: #111;
+  box-shadow: 0 8px 22px rgba(255, 199, 0, 0.35);
+  font-weight: 700;
+}
+.wp-block-services-blocks-calc-block .calc-res {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  padding: 1.8rem;
+  position: sticky;
+  top: 100px;
+}
+.wp-block-services-blocks-calc-block .calc-res h3 {
+  font-size: 1.2rem;
+  color: #ffc700;
+  margin-bottom: 1.1rem;
+}
+.wp-block-services-blocks-calc-block .crow,
+.wp-block-services-blocks-calc-block .ctotal {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.6rem 0;
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+.wp-block-services-blocks-calc-block .crow {
+  border-bottom: 1px dashed #e5e7eb;
+}
+.wp-block-services-blocks-calc-block .crow span {
+  color: rgba(255, 255, 255, 0.5019607843);
+}
+.wp-block-services-blocks-calc-block .crow b {
+  color: #fff;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.wp-block-services-blocks-calc-block .ctotal {
+  margin-top: 0.2rem;
+  padding: 0.9rem 0 1.1rem;
+  display: flex;
+  align-items: center;
+}
+.wp-block-services-blocks-calc-block .ctotal span {
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.5);
+}
+.wp-block-services-blocks-calc-block .ctotal b {
+  font-weight: 800;
+  font-size: clamp(1.1rem, 2.2vw, 3rem);
+  color: #ffc700;
+}
+.wp-block-services-blocks-calc-block .calc-res .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 0.92rem;
+  padding: 0.95rem 1.6rem;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+  white-space: nowrap;
+}
+.wp-block-services-blocks-calc-block .calc-res .btn-red {
+  background: #ffc700;
+  color: #111;
+  box-shadow: 0 10px 26px rgba(255, 199, 0, 0.28);
+  width: 100%;
+}
+.wp-block-services-blocks-calc-block .calc-res small {
+  display: block;
+  margin-top: 0.9rem;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: #6b7280;
+}
+
+@media (max-width: 960px) {
+  .wp-block-services-blocks-calc-block .calc-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .wp-block-services-blocks-calc-block .calc-res {
+    position: static;
+  }
+  .wp-block-services-blocks-calc-block .pill {
+    font-size: 0.88rem;
+    padding: 0.48rem 0.8rem;
+  }
+}

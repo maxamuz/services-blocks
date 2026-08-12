@@ -1,0 +1,111 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "services-blocks/calc-block",
+	"version": "0.1.0",
+	"title": "Блок Калькулятор",
+	"category": "services",
+	"icon": "calculator",
+	"description": "Калькулятор ориентировочной стоимости замены масла АКПП.",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"eyebrow": {
+			"type": "string",
+			"default": "Шаг 5 · Калькулятор"
+		},
+		"eyebrowColor": {
+			"type": "string",
+			"default": "#f5c518"
+		},
+		"title": {
+			"type": "string",
+			"default": "Сколько будет стоить для вашего авто?"
+		},
+		"titleColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"description": {
+			"type": "string",
+			"default": "Три нажатия — и у вас ориентир по цене, с которым можно сравнивать любые сервисы."
+		},
+
+		"makeGroupTitle": { "type": "string", "default": "Ваш автомобиль" },
+		"gearGroupTitle": { "type": "string", "default": "Коробка передач" },
+		"methodGroupTitle": { "type": "string", "default": "Метод замены" },
+
+		"makePills": {
+			"type": "array",
+			"default": [
+				{ "label": "Бюджетный / РФ", "value": "budget", "default": false },
+				{ "label": "Kia, Hyundai, Toyota, VAG…", "value": "pop", "default": true },
+				{ "label": "BMW, Mercedes, Lexus, Porsche…", "value": "prem", "default": false }
+			]
+		},
+		"gearPills": {
+			"type": "array",
+			"default": [
+				{ "label": "Автомат", "value": "at", "default": true },
+				{ "label": "Вариатор", "value": "cvt", "default": false },
+				{ "label": "Робот", "value": "dsg", "default": false }
+			]
+		},
+		"methodPills": {
+			"type": "array",
+			"default": [
+				{ "label": "Частичная", "value": "part", "default": false },
+				{ "label": "С поддоном и фильтром", "value": "filter", "default": false },
+				{ "label": "Полная аппаратная", "value": "app", "default": true }
+			]
+		},
+
+		"workPrices": {
+			"type": "object",
+			"default": {
+				"budget":  { "part": 1800, "filter": 3200, "app": 4500 },
+				"pop":     { "part": 2500, "filter": 4500, "app": 6500 },
+				"prem":    { "part": 4500, "filter": 7500, "app": 11000 }
+			}
+		},
+		"oilPrices": {
+			"type": "object",
+			"default": {
+				"at":  { "part": 2400, "filter": 3600, "app": 7200 },
+				"cvt": { "part": 3300, "filter": 4900, "app": 9600 },
+				"dsg": { "part": 2800, "filter": 4400, "app": 8500 }
+			}
+		},
+		"timeLabels": {
+			"type": "object",
+			"default": {
+				"part": "≈ 1 час",
+				"filter": "1,5–2 часа",
+				"app": "≈ 2 часа"
+			}
+		},
+
+		"asideTitle":   { "type": "string", "default": "Предварительный расчёт" },
+		"workLabel":    { "type": "string", "default": "Работы" },
+		"oilLabel":     { "type": "string", "default": "Жидкость и расходники" },
+		"timeLabel":    { "type": "string", "default": "Время в сервисе" },
+		"totalLabel":   { "type": "string", "default": "Итого под ключ" },
+		"ctaText":      { "type": "string", "default": "Зафиксировать эту цену" },
+		"ctaHref":      { "type": "string", "default": "#booking" },
+		"disclaimer":   { "type": "string", "default": "Расчёт предварительный. Точную смету зафиксируем после диагностики — и она не изменится. При записи онлайн действует скидка 5%." },
+		"emptyValue":   { "type": "string", "default": "—" }
+	},
+	"example": {
+		"attributes": {
+			"eyebrow": "Шаг 5 · Калькулятор",
+			"title": "Сколько будет стоить для вашего авто?",
+			"description": "Три нажатия — и у вас ориентир по цене."
+		}
+	},
+	"textdomain": "services-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}
