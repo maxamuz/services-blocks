@@ -9,6 +9,11 @@ export default function save({ attributes }) {
 			<section className="sec white" id="honest">
 				<div className="container honest-grid">
 					<div className="honest-photo rv">
+						<RichText.Content
+							tagName="div"
+							className="eyebrow"
+							value={eyebrow}
+						/>
 						{imageUrl && (
 							<img
 								className="honest-img"
@@ -23,11 +28,6 @@ export default function save({ attributes }) {
 					</div>
 
 					<div className="rv">
-						<RichText.Content
-							tagName="div"
-							className="eyebrow"
-							value={eyebrow}
-						/>
 						<RichText.Content tagName="h2" value={title} />
 
 						<div className="honest-list">

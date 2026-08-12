@@ -13,6 +13,7 @@
 }
 .wp-block-services-blocks-honest-block .honest-photo {
   position: relative;
+  height: 100%;
 }
 .wp-block-services-blocks-honest-block .honest-img {
   width: 100%;
@@ -27,7 +28,7 @@
   position: absolute;
   left: 1.2rem;
   right: 1.2rem;
-  bottom: 1.2rem;
+  bottom: 8rem;
   background: rgba(10, 10, 11, 0.85);
   backdrop-filter: blur(6px);
   color: #fff;
