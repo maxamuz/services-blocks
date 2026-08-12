@@ -1,0 +1,131 @@
+/*!****************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/honest-block/style.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************/
+.wp-block-services-blocks-honest-block .sec.white {
+  background: #131315;
+  padding: 4.8rem 0;
+}
+.wp-block-services-blocks-honest-block .honest-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  gap: 2.5rem;
+  align-items: center;
+}
+.wp-block-services-blocks-honest-block .honest-photo {
+  position: relative;
+}
+.wp-block-services-blocks-honest-block .honest-img {
+  width: 100%;
+  border-radius: 22px;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 24px 54px rgba(17, 24, 39, 0.14);
+  border: 1px solid #f0f1f3;
+  background: #f3f4f6;
+}
+.wp-block-services-blocks-honest-block .honest-quote {
+  position: absolute;
+  right: 1.2rem;
+  left: 1.2rem;
+  bottom: 1.2rem;
+  background: rgba(10, 10, 11, 0.85);
+  backdrop-filter: blur(6px);
+  color: #fff;
+  border-radius: 14px;
+  padding: 1rem 1.2rem;
+  font-size: 0.9rem;
+}
+.wp-block-services-blocks-honest-block .honest-quote b {
+  color: #ffc700;
+}
+.wp-block-services-blocks-honest-block .eyebrow {
+  background: rgba(184, 134, 11, 0.08);
+  border: 1px solid rgba(184, 134, 11, 0.18);
+  border-radius: 4px;
+  color: #f5c518;
+  display: inline-block;
+  font-family: Montserrat, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 18px;
+  padding: 6px 14px;
+  text-transform: uppercase;
+}
+.wp-block-services-blocks-honest-block h2 {
+  color: #fff;
+  font-family: Marske, sans-serif;
+  font-size: clamp(1.4rem, 2.8vw, 2.2rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin: 0 0 0.9rem;
+}
+.wp-block-services-blocks-honest-block h2 em {
+  font-style: normal;
+  color: #dc2626;
+}
+.wp-block-services-blocks-honest-block .honest-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+.wp-block-services-blocks-honest-block .h-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.1rem;
+  background: #18181b;
+  border: 1px solid #2b2b30;
+  border-radius: 16px;
+  padding: 1.3rem 1.4rem;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.wp-block-services-blocks-honest-block .h-item:hover {
+  transform: translateX(-8px);
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.5);
+}
+.wp-block-services-blocks-honest-block .h-item .ic {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: rgba(255, 199, 0, 0.13);
+  color: #ffc700;
+  display: grid;
+  place-items: center;
+  font-size: 1.25rem;
+}
+.wp-block-services-blocks-honest-block .h-item > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding-top: 2px;
+}
+.wp-block-services-blocks-honest-block .h-item b {
+  display: block;
+  font-size: 0.98rem;
+  margin-bottom: 0.25rem;
+}
+.wp-block-services-blocks-honest-block .h-item p {
+  font-size: 0.86rem;
+  color: #a4a4ab;
+}
+
+@media (max-width: 900px) {
+  .wp-block-services-blocks-honest-block .honest-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .wp-block-services-blocks-honest-block .honest-quote {
+    margin-top: -2rem;
+    margin-right: 0.75rem;
+    margin-left: 0.75rem;
+  }
+  .wp-block-services-blocks-honest-block .h-item {
+    grid-template-columns: 44px minmax(0, 1fr);
+    padding: 0.85rem 0.95rem;
+  }
+  .wp-block-services-blocks-honest-block .h-item .ic {
+    width: 44px;
+    height: 44px;
+    font-size: 1.35rem;
+  }
+}

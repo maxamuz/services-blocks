@@ -159,6 +159,71 @@ return array(
 		'style' => 'file:./style-index.css',
 		'viewScript' => 'file:./view.js'
 	),
+	'honest-block' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'services-blocks/honest-block',
+		'version' => '0.1.0',
+		'title' => 'Блок Доверие',
+		'category' => 'services',
+		'icon' => 'shield',
+		'description' => 'Блок «Почему нам доверяют» с фото, цитатой и списком преимуществ.',
+		'supports' => array(
+			'html' => false
+		),
+		'attributes' => array(
+			'eyebrow' => array(
+				'type' => 'string',
+				'default' => 'Шаг 3 · Доверие'
+			),
+			'title' => array(
+				'type' => 'string',
+				'default' => 'Почему нам спокойно доверяют коробку'
+			),
+			'imageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'imageAlt' => array(
+				'type' => 'string',
+				'default' => 'Механик'
+			),
+			'quote' => array(
+				'type' => 'string',
+				'default' => '«Мы за диагноз, а не за замену всего подряд» — <b>так про нас пишут в отзывах</b>, и это наш принцип.'
+			),
+			'items' => array(
+				'type' => 'array',
+				'default' => array(
+					array(
+						'icon' => '🔍',
+						'title' => 'Бесплатная диагностика и честный вердикт',
+						'text' => 'Проверим жидкость, ошибки и поведение коробки. Если масло в порядке — скажем «ездите спокойно» и не будем навязывать замену.'
+					),
+					array(
+						'icon' => '📋',
+						'title' => 'Фиксированная смета до начала работ',
+						'text' => 'Цену согласуем на приёмке и не меняем в процессе. «При приёмке цена ни разу не отличалась от согласованной» — цитата из отзыва.'
+					),
+					array(
+						'icon' => '📷',
+						'title' => 'Фотоотчёт и открытая ремзона',
+						'text' => 'Покажем слитое масло, старый фильтр и магниты с отложениями. Можете прийти и посмотреть на любой стадии — ничего не прячем.'
+					),
+					array(
+						'icon' => '🛡',
+						'title' => 'Гарантия до 2 лет / 60 000 км в заказ-наряде',
+						'text' => 'И отдельный отдел качества: +7 (977) 778-73-98 — для любых вопросов и рекламаций. Нам важно долгосрочное сотрудничество.'
+					)
+				)
+			)
+		),
+		'textdomain' => 'services-blocks',
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css',
+		'viewScript' => 'file:./view.js'
+	),
 	'mathematics-block' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
