@@ -73,7 +73,25 @@
 			"type": "string",
 			"default": "<span class=\"st\">★★★★★</span> 5.0 на Яндекс Картах · нас рекомендуют друзьям с 2009 года"
 		}
+	},"example": {
+		"attributes": {
+			"eyebrow": "Автосервис ГаражСАО · с 2009 года",
+			"title": "Замена масла в АКПП, вариаторе и роботе <em>в Москве</em>",
+			"subtitle": "Сначала бесплатно проверим состояние жидкости и честно скажем, нужна ли замена.",
+			"chips": [
+				{ "icon": "💰", "text": "от 2 500 ₽" },
+				{ "icon": "⏱", "text": "1–2 часа" },
+				{ "icon": "🛡", "text": "гарантия до 2 лет / 60 000 км", "iconClass": "gr" },
+				{ "icon": "★", "text": "5.0 · 557 отзывов", "iconClass": "st" }
+			],
+			"ctaPrimaryText": "Рассчитать мою стоимость",
+			"ctaSecondaryText": "☎ Позвонить",
+			"note": "🎁 При записи через сайт — <b>скидка 5%</b>. Диагностикa трансмиссии — <b>0 ₽</b> при замене.",
+			"formTitle": "Узнайте точную стоимость для вашего авто",
+			"trustText": "<span class=\"st\">★★★★★</span> 5.0 на Яндекс Картах · нас рекомендуют с 2009 года"
+		}
 	},
+	"textdomain": "services-blocks",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
 	"style": "file:./style-index.css",

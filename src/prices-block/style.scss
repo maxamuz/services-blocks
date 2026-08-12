@@ -1,0 +1,286 @@
+.wp-block-services-blocks-prices-block {
+	.sec {
+		background: radial-gradient(
+				900px 460px at 100% -33%,
+				rgba(255, 199, 0, 0.1),
+				transparent 62%
+			),
+			#0a0a0b;
+		padding: 4.5rem 0 3.5rem;
+
+		.eyebrow {
+			background: rgba(184, 134, 11, 0.08);
+			border: 1px solid rgba(184, 134, 11, 0.18);
+			border-radius: 4px;
+			color: #f5c518;
+			display: inline-block;
+			font-family: Montserrat, sans-serif;
+			font-size: 13px;
+			font-weight: 600;
+			letter-spacing: 1px;
+			margin-bottom: 18px;
+			padding: 6px 14px;
+			text-transform: uppercase;
+		}
+
+		h2 {
+			color: #fff;
+			font-family: Marske, sans-serif;
+			font-size: clamp(1.4rem, 2.8vw, 2.2rem);
+			font-weight: 800;
+			line-height: 1.15;
+			margin: 0 0 0.9rem;
+
+			em {
+				font-style: normal;
+				color: #dc2626;
+			}
+		}
+
+		p {
+			color: #a4a4ab;
+			margin-top: 0.8rem;
+			font-size: 1rem;
+		}
+	}
+
+	.price-cards {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 1.25rem;
+		align-items: stretch;
+	}
+
+	.pcard {
+		background: #18181b;
+		border: 1.5px solid #2b2b30;
+		border-radius: 20px;
+		padding: 1.7rem;
+		display: flex;
+		flex-direction: column;
+		gap: 0.9rem;
+		transition:
+			transform 0.25s,
+			box-shadow 0.25s,
+			border-color 0.25s;
+		position: relative;
+
+		&:hover {
+			transform: translateY(-3px);
+			box-shadow: 0 22px 48px rgba(15, 23, 42, 0.09);
+		}
+
+		&.hit {
+			border-color: #ffc700;
+			box-shadow: 0 20px 50px rgba(255, 199, 0, 0.14);
+		}
+
+		.hit-tag {
+			position: absolute;
+			top: -13px;
+			left: 1.5rem;
+			background: #ffc700;
+			color: #111;
+			font-size: 0.64rem;
+			font-weight: 700;
+			letter-spacing: 0.1em;
+			text-transform: uppercase;
+			padding: 0.35rem 0.8rem;
+			border-radius: 8px;
+		}
+
+		h3 {
+			font-size: 0.95rem;
+		}
+
+		.p {
+			font-family: "Unbounded", system-ui, sans-serif;
+			font-weight: 800;
+			font-size: 1.5rem;
+			color: #ffc700;
+		}
+
+		.t {
+			font-size: 0.75rem;
+			color: #a4a4ab;
+		}
+
+		ul {
+			list-style: none;
+			margin: 0 0 1.35rem;
+			padding: 0;
+			display: flex;
+			flex-direction: column;
+			gap: 0.55rem;
+			flex: 1;
+
+			li {
+				font-size: 1rem;
+				color: #a4a4ab;
+				display: flex;
+				gap: 0.55rem;
+
+				&::before {
+					content: "✓";
+					color: #2ecc71;
+					font-weight: 800;
+				}
+			}
+		}
+
+		.btn {
+			margin-top: auto;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			gap: 0.5rem;
+			font-family: var(--body);
+			font-weight: 700;
+			font-size: 0.92rem;
+			padding: 0.95rem 1.6rem;
+			border-radius: 12px;
+			border: 1px solid transparent;
+			transition:
+				transform 0.2s,
+				box-shadow 0.2s,
+				background 0.2s;
+			white-space: nowrap;
+		}
+
+		.btn-out {
+			border-color: #3a3a40;
+			background: transparent;
+			color: #fff;
+			&:hover {
+				border-color: #ffc700;
+				color: #ffc700;
+			}
+		}
+
+		.btn-red {
+			background: #ffc700;
+			color: #111;
+			box-shadow: 0 10px 26px rgba(255, 199, 0, 0.28);
+			&:hover {
+				background: #e0af00;
+				transform: translateY(-2px);
+			}
+		}
+	}
+
+	.price-extra {
+		margin-top: 1.3rem;
+		background: #18181b;
+		border: 1px solid #2b2b30;
+		border-radius: 16px;
+		overflow: hidden;
+	}
+
+	.prow {
+		display: flex;
+		justify-content: space-between;
+		gap: 1rem;
+		padding: 0.95rem 1.5rem;
+		border-top: 1px solid #2b2b30;
+		font-size: 0.9rem;
+		transition: background 0.2s;
+		&:hover {
+			background: #131315;
+		}
+
+		&:last-child {
+			border-bottom: 0;
+		}
+
+		span {
+			font-size: 0.95rem;
+			line-height: 1.5;
+			color: #fff;
+		}
+
+		b {
+			font-weight: 700;
+			color: #ffc700;
+			font-size: 0.98rem;
+			white-space: nowrap;
+		}
+	}
+
+	.price-foot {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 1.4rem;
+		flex-wrap: wrap;
+		margin-top: 1.4rem;
+
+		p {
+			font-size: 0.85rem;
+			color: #a4a4ab;
+			max-width: 660px;
+		}
+
+		.btn {
+			white-space: nowrap;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			gap: 0.5rem;
+			font-weight: 700;
+			font-size: 0.92rem;
+			padding: 0.95rem 1.6rem;
+			border-radius: 12px;
+			border: 1px solid transparent;
+			transition:
+				transform 0.2s,
+				box-shadow 0.2s,
+				background 0.2s;
+			white-space: nowrap;
+		}
+
+		.btn-ink {
+			background: #1e1e22;
+			color: #fff;
+			border: 1px solid #2b2b30;
+			&:hover {
+				transform: translateY(-2px);
+				border-color: #ffc700;
+			}
+		}
+	}
+}
+
+@media (max-width: 1080px) {
+	.wp-block-services-blocks-prices-block {
+		.price-cards {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+	}
+}
+
+@media (max-width: 760px) {
+	.wp-block-services-blocks-prices-block {
+		.price-cards {
+			grid-template-columns: 1fr;
+			gap: 1.1rem;
+		}
+
+		.pcard {
+			padding: 1.6rem 1.25rem 1.4rem;
+
+			.p {
+				font-size: 1.85rem;
+			}
+		}
+
+		.prow {
+			grid-template-columns: 1fr;
+			gap: 0.25rem;
+		}
+
+		.price-foot {
+			grid-template-columns: 1fr;
+			gap: 0.9rem;
+		}
+	}
+}

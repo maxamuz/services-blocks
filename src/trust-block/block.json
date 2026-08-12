@@ -32,6 +32,21 @@
 		"ratingValue": { "type": "string", "default": "5.0" },
 		"ratingDesc": { "type": "string", "default": "рейтинг · 557 отзывов" }
 	},
+	"example": {
+		"attributes": {
+			"yearsCount": "17",
+			"yearsLabel": "лет",
+			"yearsDesc": "обслуживаем автомобили",
+			"carsCount": "12400",
+			"carsHasPlus": true,
+			"carsDesc": "авто в год проходит через нас",
+			"adaptersCount": "100",
+			"adaptersHasPlus": true,
+			"adaptersDesc": "адаптеров аппаратной замены",
+			"ratingValue": "5.0",
+			"ratingDesc": "рейтинг · 557 отзывов"
+		}
+	},
 	"textdomain": "services-blocks",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",

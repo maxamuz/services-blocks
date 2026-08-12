@@ -68,6 +68,20 @@
       "default": "💡 <b>Вывод простой:</b> если коробке больше 3–4 лет или 60 000 км без замены — дешевле обновить жидкость сейчас, чем платить за ремонт потом. Проверка состояния — бесплатно."
     }
   },
+  "example": {
+    "attributes": {
+      "eyebrow": "Шаг 2 · Математика",
+      "title": "Профилактика в 8 раз дешевле ремонта",
+      "cardGoodLabel": "Замена масла в АКПП",
+      "cardGoodSum": "≈ 7 500",
+      "cardGoodCurrency": "₽",
+      "cardGoodWidth": "12",
+      "cardBadLabel": "Ремонт или замена АКПП",
+      "cardBadSum": "от 60 000",
+      "cardBadCurrency": "₽",
+      "cardBadWidth": "100"
+    }
+  },
   "textdomain": "services-blocks",
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",
