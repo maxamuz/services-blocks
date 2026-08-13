@@ -1,9 +1,17 @@
-/**
- * The following styles get applied inside the editor only.
- *
- * Replace them with your own styles or remove the file completely.
- */
+.wp-block-services-blocks-reviews-block {
+	.sec-head [contenteditable="true"],
+	.rev-card b [contenteditable="true"],
+	.rev-card small [contenteditable="true"],
+	.rev-card p [contenteditable="true"],
+	.rev-card .src [contenteditable="true"] {
+		outline: 1px dashed transparent;
+		border-radius: 4px;
+		padding: 0 2px;
+		margin: 0 -2px;
+		transition: outline-color 0.15s;
 
-.wp-block-create-block-reviews-block {
-	border: 1px dotted #f00;
+		&:focus {
+			outline-color: #fde047;
+		}
+	}
 }

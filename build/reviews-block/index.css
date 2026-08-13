@@ -1,13 +1,1 @@
-/*!******************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/reviews-block/editor.scss ***!
-  \******************************************************************************************************************************************************************************************************************************************************/
-/**
- * The following styles get applied inside the editor only.
- *
- * Replace them with your own styles or remove the file completely.
- */
-.wp-block-create-block-reviews-block {
-  border: 1px dotted #f00;
-}
-
-/*# sourceMappingURL=index.css.map*/
+.wp-block-services-blocks-reviews-block .rev-card .src [contenteditable=true],.wp-block-services-blocks-reviews-block .rev-card b [contenteditable=true],.wp-block-services-blocks-reviews-block .rev-card p [contenteditable=true],.wp-block-services-blocks-reviews-block .rev-card small [contenteditable=true],.wp-block-services-blocks-reviews-block .sec-head [contenteditable=true]{border-radius:4px;margin:0 -2px;outline:1px dashed transparent;padding:0 2px;transition:outline-color .15s}.wp-block-services-blocks-reviews-block .rev-card .src [contenteditable=true]:focus,.wp-block-services-blocks-reviews-block .rev-card b [contenteditable=true]:focus,.wp-block-services-blocks-reviews-block .rev-card p [contenteditable=true]:focus,.wp-block-services-blocks-reviews-block .rev-card small [contenteditable=true]:focus,.wp-block-services-blocks-reviews-block .sec-head [contenteditable=true]:focus{outline-color:#fde047}
