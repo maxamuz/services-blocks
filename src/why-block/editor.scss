@@ -1,0 +1,15 @@
+.wp-block-services-blocks-why-block {
+	.sec-head [contenteditable="true"],
+	.wcard b [contenteditable="true"],
+	.wcard p [contenteditable="true"] {
+		outline: 1px dashed transparent;
+		border-radius: 4px;
+		padding: 0 2px;
+		margin: 0 -2px;
+		transition: outline-color 0.15s;
+
+		&:focus {
+			outline-color: #fde047;
+		}
+	}
+}

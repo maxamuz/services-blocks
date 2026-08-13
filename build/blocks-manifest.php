@@ -778,7 +778,7 @@ return array(
 		'apiVersion' => 3,
 		'name' => 'services-blocks/process-block',
 		'version' => '0.1.0',
-		'title' => 'Process Block',
+		'title' => 'Блок: Процесс',
 		'category' => 'services',
 		'icon' => 'yes-alt',
 		'description' => '6 шагов процесса с нумерацией + комфортная зона ожидания.',
@@ -909,6 +909,27 @@ return array(
 		'editorStyle' => 'file:./index.css',
 		'style' => 'file:./style-index.css'
 	),
+	'reviews-block' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'create-block/reviews-block',
+		'version' => '0.1.0',
+		'title' => 'Reviews Block',
+		'category' => 'widgets',
+		'icon' => 'smiley',
+		'description' => 'Example block scaffolded with Create Block tool.',
+		'example' => array(
+			
+		),
+		'supports' => array(
+			'html' => false
+		),
+		'textdomain' => 'reviews-block',
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css',
+		'viewScript' => 'file:./view.js'
+	),
 	'trust-block' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
@@ -987,5 +1008,122 @@ return array(
 		'editorStyle' => 'file:./index.css',
 		'style' => 'file:./style-index.css',
 		'viewScript' => 'file:./view.js'
+	),
+	'why-block' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'services-blocks/why-block',
+		'version' => '0.1.0',
+		'title' => 'Блок: Почему мы?',
+		'category' => 'services',
+		'icon' => 'shield',
+		'description' => '6 карточек «Почему ГаражСАО» с иконками, заголовками и текстами.',
+		'example' => array(
+			'attributes' => array(
+				'eyebrow' => 'Почему ГаражСАО',
+				'title' => 'Что вы получаете, кроме свежего масла',
+				'cards' => array(
+					array(
+						'icon' => '🛡',
+						'title' => 'Гарантия до 2 лет / 60 000 км',
+						'text' => 'Фиксируем в заказ-наряде. Если что-то повторится — устраним в рамках гарантии.'
+					),
+					array(
+						'icon' => '🔌',
+						'title' => '100+ адаптеров аппаратной замены',
+						'text' => 'Полная замена почти в любой коробке, а не «слил-залил» как в обычных сервисах.'
+					),
+					array(
+						'icon' => '🧬',
+						'title' => 'Подбор жидкости по VIN и допускам',
+						'text' => 'ATF, CVT-fluid или жидкость для робота — точно по спецификации производителя.'
+					),
+					array(
+						'icon' => '🔩',
+						'title' => 'Динамометрический ключ и регламенты',
+						'text' => 'Затяжка поддона моментом из справочной системы производителя. Никакого «на глазок».'
+					),
+					array(
+						'icon' => '✅',
+						'title' => 'Оригиналы и проверенные аналоги',
+						'text' => 'Никакого барахла и подделок: расходники проходят входной контроль качества.'
+					),
+					array(
+						'icon' => '🚗',
+						'title' => 'Удобно добраться и припарковаться',
+						'text' => 'Москва, Зеленоградская 15. Парковка у сервиса, зона ожидания с кофе и Wi-Fi.'
+					)
+				)
+			)
+		),
+		'supports' => array(
+			'html' => false
+		),
+		'textdomain' => 'services-blocks',
+		'attributes' => array(
+			'eyebrow' => array(
+				'type' => 'string',
+				'default' => 'Почему ГаражСАО'
+			),
+			'title' => array(
+				'type' => 'string',
+				'default' => 'Что вы получаете, кроме свежего масла'
+			),
+			'cards' => array(
+				'type' => 'array',
+				'default' => array(
+					array(
+						'icon' => '🛡',
+						'title' => 'Гарантия до 2 лет / 60 000 км',
+						'text' => 'Фиксируем в заказ-наряде. Если что-то повторится — устраним в рамках гарантии.'
+					),
+					array(
+						'icon' => '🔌',
+						'title' => '100+ адаптеров аппаратной замены',
+						'text' => 'Полная замена почти в любой коробке, а не «слил-залил» как в обычных сервисах.'
+					),
+					array(
+						'icon' => '🧬',
+						'title' => 'Подбор жидкости по VIN и допускам',
+						'text' => 'ATF, CVT-fluid или жидкость для робота — точно по спецификации производителя.'
+					),
+					array(
+						'icon' => '🔩',
+						'title' => 'Динамометрический ключ и регламенты',
+						'text' => 'Затяжка поддона моментом из справочной системы производителя. Никакого «на глазок».'
+					),
+					array(
+						'icon' => '✅',
+						'title' => 'Оригиналы и проверенные аналоги',
+						'text' => 'Никакого барахла и подделок: расходники проходят входной контроль качества.'
+					),
+					array(
+						'icon' => '🚗',
+						'title' => 'Удобно добраться и припарковаться',
+						'text' => 'Москва, Зеленоградская 15. Парковка у сервиса, зона ожидания с кофе и Wi-Fi.'
+					)
+				),
+				'items' => array(
+					'type' => 'object',
+					'properties' => array(
+						'icon' => array(
+							'type' => 'string',
+							'default' => '🛡'
+						),
+						'title' => array(
+							'type' => 'string',
+							'default' => 'Заголовок'
+						),
+						'text' => array(
+							'type' => 'string',
+							'default' => 'Описание преимущества.'
+						)
+					)
+				)
+			)
+		),
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css'
 	)
 );

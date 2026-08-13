@@ -3,7 +3,7 @@
   "apiVersion": 3,
   "name": "services-blocks/process-block",
   "version": "0.1.0",
-  "title": "Process Block",
+  "title": "Блок: Процесс",
   "category": "services",
   "icon": "yes-alt",
   "description": "6 шагов процесса с нумерацией + комфортная зона ожидания.",
