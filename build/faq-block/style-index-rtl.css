@@ -1,0 +1,121 @@
+/*!*************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/faq-block/style.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************************/
+.wp-block-services-blocks-faq-block.sec {
+  background: #131315;
+  padding-bottom: 4.8rem;
+}
+.wp-block-services-blocks-faq-block .sec-head {
+  padding: 4.5rem 0 1rem;
+}
+.wp-block-services-blocks-faq-block .sec-head .eyebrow {
+  background: rgba(184, 134, 11, 0.08);
+  border: 1px solid rgba(184, 134, 11, 0.18);
+  border-radius: 4px;
+  color: #f5c518;
+  display: inline-block;
+  font-family: Montserrat, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 18px;
+  padding: 6px 14px;
+  text-transform: uppercase;
+}
+.wp-block-services-blocks-faq-block .sec-head h2 {
+  color: #fff;
+  font-family: Marske, sans-serif;
+  font-size: clamp(1.4rem, 2.8vw, 2.2rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin: 0 0 0.9rem;
+}
+.wp-block-services-blocks-faq-block .faq-wrap {
+  margin-top: 2rem;
+  display: grid;
+  gap: 0.8rem;
+}
+.wp-block-services-blocks-faq-block .faq-item {
+  background: #18181b;
+  border: 1px solid #2b2b30;
+  border-radius: 14px;
+  margin-bottom: 0.7rem;
+  overflow: hidden;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+.wp-block-services-blocks-faq-block .faq-item.open {
+  border-color: #ffc700;
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.5);
+}
+.wp-block-services-blocks-faq-block .faq-item.open .pl {
+  transform: rotate(-45deg);
+  background: #ffc700;
+  color: #111;
+  padding-bottom: 2px;
+}
+.wp-block-services-blocks-faq-block .faq-item.open .faq-a {
+  max-height: 500px;
+  opacity: 1;
+  padding-top: 0;
+  padding-bottom: 1.15rem;
+}
+.wp-block-services-blocks-faq-block .faq-q {
+  width: 100%;
+  background: none;
+  border: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  text-align: right;
+  padding: 1.15rem 1.4rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #fff;
+}
+.wp-block-services-blocks-faq-block .faq-q:focus-visible {
+  outline: 2px solid #fde047;
+  outline-offset: -2px;
+}
+.wp-block-services-blocks-faq-block .pl {
+  flex: 0 0 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(255, 199, 0, 0.13);
+  color: #ffc700;
+  display: grid;
+  place-items: center;
+  font-size: 0.95rem;
+  transition: 0.3s;
+}
+.wp-block-services-blocks-faq-block .faq-a {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0 1.35rem;
+  transition: max-height 0.35s ease, opacity 0.25s ease, padding-bottom 0.2s ease;
+}
+.wp-block-services-blocks-faq-block .faq-a p {
+  color: #a4a4ab;
+  font-size: 0.9rem;
+}
+.wp-block-services-blocks-faq-block .faq-item.is-preview-open .faq-a {
+  max-height: 500px;
+  opacity: 1;
+  padding-bottom: 1.15rem;
+}
+
+@media (max-width: 640px) {
+  .wp-block-services-blocks-faq-block .faq-q {
+    padding: 0.95rem 1.05rem;
+    font-size: 0.98rem;
+  }
+  .wp-block-services-blocks-faq-block .faq-a {
+    padding: 0 1.05rem;
+  }
+  .wp-block-services-blocks-faq-block .pl {
+    width: 28px;
+    height: 28px;
+    font-size: 1.2rem;
+  }
+}

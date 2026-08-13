@@ -1,0 +1,144 @@
+.wp-block-services-blocks-faq-block {
+	&.sec {
+		background: #131315;
+		padding-bottom: 4.8rem;
+	}
+	.sec-head {
+		padding: 4.5rem 0 1rem;
+
+		.eyebrow {
+			background: rgba(184, 134, 11, 0.08);
+			border: 1px solid rgba(184, 134, 11, 0.18);
+			border-radius: 4px;
+			color: #f5c518;
+			display: inline-block;
+			font-family: Montserrat, sans-serif;
+			font-size: 13px;
+			font-weight: 600;
+			letter-spacing: 1px;
+			margin-bottom: 18px;
+			padding: 6px 14px;
+			text-transform: uppercase;
+		}
+
+		h2 {
+			color: #fff;
+			font-family: Marske, sans-serif;
+			font-size: clamp(1.4rem, 2.8vw, 2.2rem);
+			font-weight: 800;
+			line-height: 1.15;
+			margin: 0 0 0.9rem;
+		}
+	}
+
+	.faq-wrap {
+		margin-top: 2rem;
+		display: grid;
+		gap: 0.8rem;
+	}
+
+	.faq-item {
+		background: #18181b;
+		border: 1px solid #2b2b30;
+		border-radius: 14px;
+		margin-bottom: 0.7rem;
+		overflow: hidden;
+		transition:
+			border-color 0.25s,
+			box-shadow 0.25s;
+
+		&.open {
+			border-color: #ffc700;
+			box-shadow: 0 12px 34px rgba(0, 0, 0, 0.5);
+
+			.pl {
+				transform: rotate(45deg);
+				background: #ffc700;
+				color: #111;
+				padding-bottom: 2px;
+			}
+
+			.faq-a {
+				max-height: 500px;
+				opacity: 1;
+				padding-top: 0;
+				padding-bottom: 1.15rem;
+			}
+		}
+	}
+
+	.faq-q {
+		width: 100%;
+		background: none;
+		border: 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 1rem;
+		text-align: left;
+		padding: 1.15rem 1.4rem;
+		font-weight: 600;
+		font-size: 0.95rem;
+		color: #fff;
+
+		&:focus-visible {
+			outline: 2px solid #fde047;
+			outline-offset: -2px;
+		}
+	}
+
+	.pl {
+		flex: 0 0 28px;
+		height: 28px;
+		border-radius: 50%;
+		background: rgba(255, 199, 0, 0.13);
+		color: #ffc700;
+		display: grid;
+		place-items: center;
+		font-size: 0.95rem;
+		transition: 0.3s;
+	}
+
+	.faq-a {
+		max-height: 0;
+		opacity: 0;
+		overflow: hidden;
+		padding: 0 1.35rem;
+		transition:
+			max-height 0.35s ease,
+			opacity 0.25s ease,
+			padding-bottom 0.2s ease;
+
+		p {
+			color: #a4a4ab;
+			font-size: 0.9rem;
+		}
+	}
+
+	.faq-item.is-preview-open {
+		.faq-a {
+			max-height: 500px;
+			opacity: 1;
+			padding-bottom: 1.15rem;
+		}
+	}
+}
+
+@media (max-width: 640px) {
+	.wp-block-services-blocks-faq-block {
+		.faq-q {
+			padding: 0.95rem 1.05rem;
+			font-size: 0.98rem;
+		}
+
+		.faq-a {
+			padding: 0 1.05rem;
+		}
+
+		.pl {
+			width: 28px;
+			height: 28px;
+			font-size: 1.2rem;
+		}
+	}
+}

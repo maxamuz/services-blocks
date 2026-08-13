@@ -158,19 +158,15 @@
 		}
 
 		.ava {
-			flex: 0 0 auto;
 			width: 46px;
 			height: 46px;
-			border-radius: 999px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			font-family: "Golos Text", system-ui, sans-serif;
-			font-weight: 800;
-			font-size: 0.9rem;
-			color: #fff;
-			background: linear-gradient(135deg, #ef4444 0%, #f97316 100%);
-			box-shadow: 0 6px 14px rgba(239, 68, 68, 0.22);
+			border-radius: 50%;
+			background: rgba(255, 199, 0, 0.13);
+			color: #ffc700;
+			display: grid;
+			place-items: center;
+			font-weight: 700;
+			font-size: 0.85rem;
 		}
 
 		.head b {
