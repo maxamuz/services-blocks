@@ -1,0 +1,17 @@
+.wp-block-services-blocks-process-block {
+	.pstep h3 [contenteditable="true"],
+	.pstep p [contenteditable="true"],
+	.proc-comfort .txt h3 [contenteditable="true"],
+	.proc-comfort .txt p [contenteditable="true"],
+	.sec-head [contenteditable="true"] {
+		outline: 1px dashed transparent;
+		border-radius: 4px;
+		padding: 0 2px;
+		margin: 0 -2px;
+		transition: outline-color 0.15s;
+
+		&:focus {
+			outline-color: #fde047;
+		}
+	}
+}

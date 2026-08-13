@@ -76,7 +76,8 @@
   border-radius: 8px;
 }
 .wp-block-services-blocks-prices-block .pcard h3 {
-  font-size: 0.95rem;
+  font-size: 1.2rem;
+  letter-spacing: 1.5px;
 }
 .wp-block-services-blocks-prices-block .pcard .p {
   font-family: "Unbounded", system-ui, sans-serif;
