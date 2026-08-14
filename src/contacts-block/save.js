@@ -11,7 +11,7 @@ export default function save({ attributes }) {
 			})}
 		>
 			<div className="container">
-				<div className="sec-head rv" style={{ textAlign: "center" }}>
+				<div className="sec-head rv" style={{ textAlign: "left" }}>
 					<div className="eyebrow">{eyebrow}</div>
 					{!RichText.isEmpty(title) && (
 						<RichText.Content tagName="h2" value={title} />
