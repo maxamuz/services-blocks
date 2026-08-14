@@ -119,6 +119,7 @@
     margin-top: -2rem;
     margin-right: 0.75rem;
     margin-left: 0.75rem;
+    bottom: 2rem;
   }
   .wp-block-services-blocks-honest-block .h-item {
     grid-template-columns: 44px minmax(0, 1fr);

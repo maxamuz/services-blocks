@@ -218,3 +218,9 @@
   color: #ffb300;
   letter-spacing: 1px;
 }
+
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+}

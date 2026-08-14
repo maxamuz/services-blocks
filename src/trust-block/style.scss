@@ -42,3 +42,9 @@
 		}
 	}
 }
+
+@media (max-width: 760px) {
+	.trustbar .trust-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
