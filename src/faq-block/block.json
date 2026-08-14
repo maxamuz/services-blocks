@@ -3,7 +3,7 @@
 	"apiVersion": 3,
 	"name": "services-blocks/faq-block",
 	"version": "0.1.0",
-	"title": "FAQ Block",
+	"title": " Блок FAQ",
 	"category": "services",
 	"icon": "editor-help",
 	"description": "FAQ-аккордеон: 8 вопросов/ответов с раскрытием по клику.",

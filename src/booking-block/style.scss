@@ -1,0 +1,213 @@
+.sec.booking {
+	background: linear-gradient(135deg, #ffc700 0%, #e0af00 100%);
+	padding-bottom: 4.8rem;
+	padding-top: 4.8rem;
+	color: var(--fg, #0f172a);
+	position: relative;
+	overflow: hidden;
+}
+
+.container.book-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: clamp(1.5rem, 3.5vw, 3rem);
+	align-items: center;
+}
+
+.book-left .eyebrow {
+	background: rgba(184, 134, 11, 0.21);
+	border: 1px solid rgba(184, 134, 11, 0.52);
+	border-radius: 4px;
+	color: #4a3c00;
+	display: inline-block;
+	font-family: Montserrat, sans-serif;
+	font-size: 13px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	margin-bottom: 18px;
+	padding: 6px 14px;
+	text-transform: uppercase;
+}
+
+.book-left h2 {
+	line-height: 1.12;
+	font-weight: 800;
+	margin: 0 0 1rem;
+	color: #111;
+}
+
+.book-left > p {
+	margin: 1rem 0 1.4rem;
+	font-family: "Golos Text", system-ui, sans-serif;
+	color: rgba(17, 17, 17, 0.8);
+	max-width: 470px;
+}
+
+ul.book-perks {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: grid;
+	gap: 0.65rem;
+}
+
+ul.book-perks li {
+	display: flex;
+	gap: 0.6rem;
+	font-size: 0.92rem;
+	font-weight: 600;
+}
+
+ul.book-perks li::before {
+	content: "✓";
+	font-weight: 800;
+	color: #2ecc71;
+	font-size: 16px;
+}
+
+.book-form {
+	background: #18181b;
+	border: 1px solid #2b2b30;
+	border-radius: 22px;
+	padding: 2.2rem;
+	color: #fff;
+	box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+}
+
+.book-form h3 {
+	font-size: 1.4rem;
+	margin: 0.5rem;
+}
+
+.book-form p.sub {
+	font-size: 0.85rem;
+	color: #a4a4ab;
+	margin-bottom: 1.3rem;
+}
+
+.book-form {
+	form {
+		input[type="text"] {
+			background: #131315;
+			border: 1.5px solid #2b2b30;
+			border-radius: 12px;
+			color: #fff;
+			flex: 1;
+			font-family:
+				Golos Text,
+				system-ui,
+				sans-serif;
+			font-size: 0.95rem;
+			outline: none;
+			padding: 0.95rem 1.1rem;
+			transition: border-color 0.2s;
+			width: 100%;
+		}
+
+		input[type="tel"] {
+			background: #131315;
+			border: 1.5px solid #2b2b30;
+			border-radius: 12px;
+			color: #fff;
+			flex: 1;
+			font-family:
+				Golos Text,
+				system-ui,
+				sans-serif;
+			font-size: 0.95rem;
+			outline: none;
+			padding: 0.95rem 1.1rem;
+			transition: border-color 0.2s;
+			width: 100%;
+		}
+
+		input[type="submit"] {
+			background: #ffc700;
+			border: 1px solid transparent;
+			border-radius: 12px;
+			box-shadow: 0 10px 26px rgba(255, 199, 0, 0.28);
+			color: #111;
+			font-family:
+				Golos Text,
+				system-ui,
+				sans-serif;
+			font-size: 0.92rem;
+			font-weight: 700;
+			padding: 0.95rem 1.6rem;
+			width: 100%;
+		}
+
+		.captcha-image {
+			border-color: #2b2b30;
+			border-radius: 12px;
+			color: #787884;
+			font-size: 0.85rem;
+			width: 100%;
+		}
+
+		.form-agreement {
+			color: #6f6f6f;
+			font-size: 14px;
+			line-height: 1.5;
+			margin-top: 12px;
+		}
+
+		.wpcf7-list-item-label {
+			font-size: 12px;
+			display: flex;
+			align-items: baseline;
+			a {
+				color: #6f6f6f;
+				font-weight: 500;
+			}
+		}
+	}
+}
+
+@keyframes shake {
+	0%,
+	100% {
+		transform: translateX(0);
+	}
+	25% {
+		transform: translateX(-5px);
+	}
+	50% {
+		transform: translateX(5px);
+	}
+	75% {
+		transform: translateX(-4px);
+	}
+}
+
+@media (max-width: 900px) {
+	.container.book-grid {
+		grid-template-columns: 1fr;
+		gap: 2rem;
+	}
+
+	.book-left h2 {
+		font-size: clamp(1.7rem, 5.5vw, 2.2rem);
+	}
+}
+
+@media (max-width: 640px) {
+	.book-form {
+		padding: 1.4rem 1.15rem;
+		border-radius: 18px;
+	}
+
+	.book-form .f-2,
+	.book-form .wpcf7 .f-2,
+	.book-form > div[class*="-row"] + div[class*="-row"] {
+		grid-template-columns: 1fr;
+		gap: 0.8rem;
+	}
+
+	.book-form .btn,
+	.book-form input[type="submit"],
+	.book-form .wpcf7-submit {
+		padding: 0.95rem 1.2rem;
+		font-size: 0.98rem;
+	}
+}

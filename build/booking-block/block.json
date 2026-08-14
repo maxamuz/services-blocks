@@ -1,0 +1,72 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "services-blocks/booking-block",
+  "version": "0.1.0",
+  "title": "Блок Онлайн запись",
+  "category": "services",
+  "icon": "calendar-alt",
+  "description": "Секция бронирования: преимущества + Contact Form 7 шорткод.",
+  "example": {
+    "attributes": {
+      "eyebrow": "Последний шаг",
+      "title": "Запишитесь сегодня — заберите коробку с плавными переключениями",
+      "description": "Оставьте заявку: перезвоним в течение 15 минут, сориентируем по цене и подберём удобное окно. Ежедневно с 8:00 до 21:00.",
+      "perks": [
+        "Скидка 5% при записи через сайт",
+        "Диагностика трансмиссии — 0 ₽ при замене",
+        "Смета фиксируется до начала работ и не меняется",
+        "Гарантия до 2 лет / 60 000 км в заказ-наряде"
+      ],
+      "formTitle": "Онлайн-запись · скидка 5%",
+      "formSubtitle": "После отправки менеджер свяжется с вами и уточнит время визита.",
+      "cf7Shortcode": "[contact-form-7 id=\"6155b65\" title=\"Главная форма\"]"
+    }
+  },
+  "supports": {
+    "html": false
+  },
+  "textdomain": "services-blocks",
+  "attributes": {
+    "eyebrow": {
+      "type": "string",
+      "default": "Последний шаг"
+    },
+    "title": {
+      "type": "string",
+      "default": "Запишитесь сегодня — заберите коробку с плавными переключениями"
+    },
+    "description": {
+      "type": "string",
+      "default": "Оставьте заявку: перезвоним в течение 15 минут, сориентируем по цене и подберём удобное окно. Ежедневно с 8:00 до 21:00."
+    },
+    "perks": {
+      "type": "array",
+      "default": [
+        "Скидка 5% при записи через сайт",
+        "Диагностика трансмиссии — 0 ₽ при замене",
+        "Смета фиксируется до начала работ и не меняется",
+        "Гарантия до 2 лет / 60 000 км в заказ-наряде"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "formTitle": {
+      "type": "string",
+      "default": "Онлайн-запись · скидка 5%"
+    },
+    "formSubtitle": {
+      "type": "string",
+      "default": "После отправки менеджер свяжется с вами и уточнит время визита."
+    },
+    "cf7Shortcode": {
+      "type": "string",
+      "default": "[contact-form-7 id=\"6155b65\" title=\"Главная форма\"]"
+    }
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js"
+}

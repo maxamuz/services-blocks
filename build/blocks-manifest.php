@@ -1,6 +1,78 @@
 <?php
 // This file is generated. Do not modify it manually.
 return array(
+	'booking-block' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'services-blocks/booking-block',
+		'version' => '0.1.0',
+		'title' => 'Блок Онлайн запись',
+		'category' => 'services',
+		'icon' => 'calendar-alt',
+		'description' => 'Секция бронирования: преимущества + Contact Form 7 шорткод.',
+		'example' => array(
+			'attributes' => array(
+				'eyebrow' => 'Последний шаг',
+				'title' => 'Запишитесь сегодня — заберите коробку с плавными переключениями',
+				'description' => 'Оставьте заявку: перезвоним в течение 15 минут, сориентируем по цене и подберём удобное окно. Ежедневно с 8:00 до 21:00.',
+				'perks' => array(
+					'Скидка 5% при записи через сайт',
+					'Диагностика трансмиссии — 0 ₽ при замене',
+					'Смета фиксируется до начала работ и не меняется',
+					'Гарантия до 2 лет / 60 000 км в заказ-наряде'
+				),
+				'formTitle' => 'Онлайн-запись · скидка 5%',
+				'formSubtitle' => 'После отправки менеджер свяжется с вами и уточнит время визита.',
+				'cf7Shortcode' => '[contact-form-7 id="6155b65" title="Главная форма"]'
+			)
+		),
+		'supports' => array(
+			'html' => false
+		),
+		'textdomain' => 'services-blocks',
+		'attributes' => array(
+			'eyebrow' => array(
+				'type' => 'string',
+				'default' => 'Последний шаг'
+			),
+			'title' => array(
+				'type' => 'string',
+				'default' => 'Запишитесь сегодня — заберите коробку с плавными переключениями'
+			),
+			'description' => array(
+				'type' => 'string',
+				'default' => 'Оставьте заявку: перезвоним в течение 15 минут, сориентируем по цене и подберём удобное окно. Ежедневно с 8:00 до 21:00.'
+			),
+			'perks' => array(
+				'type' => 'array',
+				'default' => array(
+					'Скидка 5% при записи через сайт',
+					'Диагностика трансмиссии — 0 ₽ при замене',
+					'Смета фиксируется до начала работ и не меняется',
+					'Гарантия до 2 лет / 60 000 км в заказ-наряде'
+				),
+				'items' => array(
+					'type' => 'string'
+				)
+			),
+			'formTitle' => array(
+				'type' => 'string',
+				'default' => 'Онлайн-запись · скидка 5%'
+			),
+			'formSubtitle' => array(
+				'type' => 'string',
+				'default' => 'После отправки менеджер свяжется с вами и уточнит время визита.'
+			),
+			'cf7Shortcode' => array(
+				'type' => 'string',
+				'default' => '[contact-form-7 id="6155b65" title="Главная форма"]'
+			)
+		),
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css',
+		'viewScript' => 'file:./view.js'
+	),
 	'calc-block' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
@@ -204,6 +276,216 @@ return array(
 		'style' => 'file:./style-index.css',
 		'viewScript' => 'file:./view.js'
 	),
+	'contacts-block' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'services-blocks/contacts-block',
+		'version' => '0.1.0',
+		'title' => 'Блок Контакты',
+		'category' => 'services',
+		'icon' => 'location-alt',
+		'description' => 'Секция контактов: адрес, телефоны, соцсети + карта Yandex/Google iframe.',
+		'example' => array(
+			'attributes' => array(
+				'eyebrow' => 'Контакты',
+				'title' => 'Приезжайте — мы рядом и на связи',
+				'lines' => array(
+					array(
+						'icon' => '📍',
+						'bold' => 'Москва, ул. Зеленоградская, 15',
+						'small' => 'парковка для клиентов у сервиса',
+						'href' => '',
+						'hrefType' => 'none'
+					),
+					array(
+						'icon' => '📞',
+						'bold' => '+7 (495) 798-98-87',
+						'small' => 'запись и консультации, ежедневно 8:00–21:00',
+						'href' => 'tel:+74957989887',
+						'hrefType' => 'tel'
+					),
+					array(
+						'icon' => '💬',
+						'bold' => 'WhatsApp / Telegram: +7 (901) 569-06-96',
+						'small' => 'пришлём смету, фотоотчёт, напомним о записи',
+						'href' => 'https://wa.me/79015690696',
+						'hrefType' => 'blank'
+					),
+					array(
+						'icon' => '✉️',
+						'bold' => 'info@garagesao.ru',
+						'small' => 'вопросы и документы',
+						'href' => 'mailto:info@garagesao.ru',
+						'hrefType' => 'mailto'
+					),
+					array(
+						'icon' => '🛡',
+						'bold' => 'Отдел качества: +7 (977) 778-73-98',
+						'small' => 'рекламации, жалобы, предложения — мы слушаем',
+						'href' => 'tel:+79777787398',
+						'hrefType' => 'tel'
+					)
+				),
+				'buttons' => array(
+					array(
+						'text' => 'Построить маршрут',
+						'href' => 'https://yandex.ru/maps/?text=Москва, Зеленоградская улица 15',
+						'className' => 'btn-ink',
+						'blank' => true
+					),
+					array(
+						'text' => 'Написать в WhatsApp',
+						'href' => 'https://wa.me/79015690696',
+						'className' => 'btn-wa',
+						'blank' => true
+					)
+				),
+				'mapSrc' => 'https://yandex.ru/map-widget/v1/?text=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C%20%D0%97%D0%B5%D0%BB%D0%B5%D0%BD%D0%BE%D0%B3%D1%80%D0%B0%D0%B4%D1%81%D0%BA%D0%B0%D1%8F%2015&z=16',
+				'mapTitle' => 'ГаражСАО на карте'
+			)
+		),
+		'supports' => array(
+			'html' => false
+		),
+		'textdomain' => 'services-blocks',
+		'attributes' => array(
+			'eyebrow' => array(
+				'type' => 'string',
+				'default' => 'Контакты'
+			),
+			'title' => array(
+				'type' => 'string',
+				'default' => 'Приезжайте — мы рядом и на связи'
+			),
+			'lines' => array(
+				'type' => 'array',
+				'default' => array(
+					array(
+						'icon' => '📍',
+						'bold' => 'Москва, ул. Зеленоградская, 15',
+						'small' => 'парковка для клиентов у сервиса',
+						'href' => '',
+						'hrefType' => 'none'
+					),
+					array(
+						'icon' => '📞',
+						'bold' => '+7 (495) 798-98-87',
+						'small' => 'запись и консультации, ежедневно 8:00–21:00',
+						'href' => 'tel:+74957989887',
+						'hrefType' => 'tel'
+					),
+					array(
+						'icon' => '💬',
+						'bold' => 'WhatsApp / Telegram: +7 (901) 569-06-96',
+						'small' => 'пришлём смету, фотоотчёт, напомним о записи',
+						'href' => 'https://wa.me/79015690696',
+						'hrefType' => 'blank'
+					),
+					array(
+						'icon' => '✉️',
+						'bold' => 'info@garagesao.ru',
+						'small' => 'вопросы и документы',
+						'href' => 'mailto:info@garagesao.ru',
+						'hrefType' => 'mailto'
+					),
+					array(
+						'icon' => '🛡',
+						'bold' => 'Отдел качества: +7 (977) 778-73-98',
+						'small' => 'рекламации, жалобы, предложения — мы слушаем',
+						'href' => 'tel:+79777787398',
+						'hrefType' => 'tel'
+					)
+				),
+				'items' => array(
+					'type' => 'object',
+					'properties' => array(
+						'icon' => array(
+							'type' => 'string',
+							'default' => '📍'
+						),
+						'bold' => array(
+							'type' => 'string',
+							'default' => ''
+						),
+						'small' => array(
+							'type' => 'string',
+							'default' => ''
+						),
+						'href' => array(
+							'type' => 'string',
+							'default' => ''
+						),
+						'hrefType' => array(
+							'type' => 'string',
+							'default' => 'none',
+							'enum' => array(
+								'none',
+								'tel',
+								'mailto',
+								'blank',
+								'default'
+							)
+						)
+					)
+				)
+			),
+			'buttons' => array(
+				'type' => 'array',
+				'default' => array(
+					array(
+						'text' => 'Построить маршрут',
+						'href' => 'https://yandex.ru/maps/?text=Москва, Зеленоградская улица 15',
+						'className' => 'btn-ink',
+						'blank' => true
+					),
+					array(
+						'text' => 'Написать в WhatsApp',
+						'href' => 'https://wa.me/79015690696',
+						'className' => 'btn-wa',
+						'blank' => true
+					)
+				),
+				'items' => array(
+					'type' => 'object',
+					'properties' => array(
+						'text' => array(
+							'type' => 'string',
+							'default' => ''
+						),
+						'href' => array(
+							'type' => 'string',
+							'default' => ''
+						),
+						'className' => array(
+							'type' => 'string',
+							'default' => 'btn-ink',
+							'enum' => array(
+								'btn-ink',
+								'btn-wa',
+								'btn-red',
+								'btn-outline'
+							)
+						),
+						'blank' => array(
+							'type' => 'boolean',
+							'default' => true
+						)
+					)
+				)
+			),
+			'mapSrc' => array(
+				'type' => 'string',
+				'default' => 'https://yandex.ru/map-widget/v1/?text=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C%20%D0%97%D0%B5%D0%BB%D0%B5%D0%BD%D0%BE%D0%B3%D1%80%D0%B0%D0%B4%D1%81%D0%BA%D0%B0%D1%8F%2015&z=16'
+			),
+			'mapTitle' => array(
+				'type' => 'string',
+				'default' => 'ГаражСАО на карте'
+			)
+		),
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css'
+	),
 	'diagnost-block' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
@@ -291,7 +573,7 @@ return array(
 		'apiVersion' => 3,
 		'name' => 'services-blocks/faq-block',
 		'version' => '0.1.0',
-		'title' => 'FAQ Block',
+		'title' => ' Блок FAQ',
 		'category' => 'services',
 		'icon' => 'editor-help',
 		'description' => 'FAQ-аккордеон: 8 вопросов/ответов с раскрытием по клику.',

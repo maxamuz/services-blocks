@@ -1,0 +1,19 @@
+.wp-block-services-blocks-contacts-block {
+	.sec-head .eyebrow {
+		cursor: default;
+	}
+
+	.sec-head h2[contenteditable="true"],
+	.con-line b[contenteditable="true"],
+	.con-line small[contenteditable="true"] {
+		outline: 1px dashed transparent;
+		border-radius: 4px;
+		padding: 0 2px;
+		margin: 0 -2px;
+		transition: outline-color 0.15s;
+
+		&:focus {
+			outline-color: #fde047;
+		}
+	}
+}

@@ -1,0 +1,178 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "services-blocks/contacts-block",
+	"version": "0.1.0",
+	"title": "Блок Контакты",
+	"category": "services",
+	"icon": "location-alt",
+	"description": "Секция контактов: адрес, телефоны, соцсети + карта Yandex/Google iframe.",
+	"example": {
+		"attributes": {
+			"eyebrow": "Контакты",
+			"title": "Приезжайте — мы рядом и на связи",
+			"lines": [
+				{
+					"icon": "📍",
+					"bold": "Москва, ул. Зеленоградская, 15",
+					"small": "парковка для клиентов у сервиса",
+					"href": "",
+					"hrefType": "none"
+				},
+				{
+					"icon": "📞",
+					"bold": "+7 (495) 798-98-87",
+					"small": "запись и консультации, ежедневно 8:00–21:00",
+					"href": "tel:+74957989887",
+					"hrefType": "tel"
+				},
+				{
+					"icon": "💬",
+					"bold": "WhatsApp / Telegram: +7 (901) 569-06-96",
+					"small": "пришлём смету, фотоотчёт, напомним о записи",
+					"href": "https://wa.me/79015690696",
+					"hrefType": "blank"
+				},
+				{
+					"icon": "✉️",
+					"bold": "info@garagesao.ru",
+					"small": "вопросы и документы",
+					"href": "mailto:info@garagesao.ru",
+					"hrefType": "mailto"
+				},
+				{
+					"icon": "🛡",
+					"bold": "Отдел качества: +7 (977) 778-73-98",
+					"small": "рекламации, жалобы, предложения — мы слушаем",
+					"href": "tel:+79777787398",
+					"hrefType": "tel"
+				}
+			],
+			"buttons": [
+				{
+					"text": "Построить маршрут",
+					"href": "https://yandex.ru/maps/?text=Москва, Зеленоградская улица 15",
+					"className": "btn-ink",
+					"blank": true
+				},
+				{
+					"text": "Написать в WhatsApp",
+					"href": "https://wa.me/79015690696",
+					"className": "btn-wa",
+					"blank": true
+				}
+			],
+			"mapSrc": "https://yandex.ru/map-widget/v1/?text=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C%20%D0%97%D0%B5%D0%BB%D0%B5%D0%BD%D0%BE%D0%B3%D1%80%D0%B0%D0%B4%D1%81%D0%BA%D0%B0%D1%8F%2015&z=16",
+			"mapTitle": "ГаражСАО на карте"
+		}
+	},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "services-blocks",
+	"attributes": {
+		"eyebrow": {
+			"type": "string",
+			"default": "Контакты"
+		},
+		"title": {
+			"type": "string",
+			"default": "Приезжайте — мы рядом и на связи"
+		},
+		"lines": {
+			"type": "array",
+			"default": [
+				{
+					"icon": "📍",
+					"bold": "Москва, ул. Зеленоградская, 15",
+					"small": "парковка для клиентов у сервиса",
+					"href": "",
+					"hrefType": "none"
+				},
+				{
+					"icon": "📞",
+					"bold": "+7 (495) 798-98-87",
+					"small": "запись и консультации, ежедневно 8:00–21:00",
+					"href": "tel:+74957989887",
+					"hrefType": "tel"
+				},
+				{
+					"icon": "💬",
+					"bold": "WhatsApp / Telegram: +7 (901) 569-06-96",
+					"small": "пришлём смету, фотоотчёт, напомним о записи",
+					"href": "https://wa.me/79015690696",
+					"hrefType": "blank"
+				},
+				{
+					"icon": "✉️",
+					"bold": "info@garagesao.ru",
+					"small": "вопросы и документы",
+					"href": "mailto:info@garagesao.ru",
+					"hrefType": "mailto"
+				},
+				{
+					"icon": "🛡",
+					"bold": "Отдел качества: +7 (977) 778-73-98",
+					"small": "рекламации, жалобы, предложения — мы слушаем",
+					"href": "tel:+79777787398",
+					"hrefType": "tel"
+				}
+			],
+			"items": {
+				"type": "object",
+				"properties": {
+					"icon": { "type": "string", "default": "📍" },
+					"bold": { "type": "string", "default": "" },
+					"small": { "type": "string", "default": "" },
+					"href": { "type": "string", "default": "" },
+					"hrefType": {
+						"type": "string",
+						"default": "none",
+						"enum": ["none", "tel", "mailto", "blank", "default"]
+					}
+				}
+			}
+		},
+		"buttons": {
+			"type": "array",
+			"default": [
+				{
+					"text": "Построить маршрут",
+					"href": "https://yandex.ru/maps/?text=Москва, Зеленоградская улица 15",
+					"className": "btn-ink",
+					"blank": true
+				},
+				{
+					"text": "Написать в WhatsApp",
+					"href": "https://wa.me/79015690696",
+					"className": "btn-wa",
+					"blank": true
+				}
+			],
+			"items": {
+				"type": "object",
+				"properties": {
+					"text": { "type": "string", "default": "" },
+					"href": { "type": "string", "default": "" },
+					"className": {
+						"type": "string",
+						"default": "btn-ink",
+						"enum": ["btn-ink", "btn-wa", "btn-red", "btn-outline"]
+					},
+					"blank": { "type": "boolean", "default": true }
+				}
+			}
+		},
+		"mapSrc": {
+			"type": "string",
+			"default": "https://yandex.ru/map-widget/v1/?text=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C%20%D0%97%D0%B5%D0%BB%D0%B5%D0%BD%D0%BE%D0%B3%D1%80%D0%B0%D0%B4%D1%81%D0%BA%D0%B0%D1%8F%2015&z=16"
+		},
+		"mapTitle": {
+			"type": "string",
+			"default": "ГаражСАО на карте"
+		}
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}
